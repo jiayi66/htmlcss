@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<meta name="renderer" content="webkit|ie-stand"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=edge,chrome=1"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, email=no"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="x5-page-mode" content="app"/>
+<meta name="browsermode" content="application"/>
+<meta name="wap-font-scale" content="no"/>
+<title>穷举各种类型的表格</title>
+<style>
+
+
+ul,ol,p{padding:0;margin:0;list-style:none}
+table{border-spacing:0;font-size:12px;}th,td{padding:0}th{font-weight:400}
+
+
+
+.per100{width:100%;}
+
+.pd3{padding:3px;}
+.pd6{padding:6px;}
+.pd9{padding:9px;}
+
+.tal{text-align:left !important;}
+.tac{text-align:center !important;}
+.tar{text-align:right !important;}
+
+
+
+
+
+
+/****  table.css  ****/
+
+
+.tbpd3 th,.tbpd3 td{padding:3px;}
+.tbpd6 th,.tbpd6 td{padding:6px;}
+.tbpd9 th,.tbpd9 td{padding:9px;}
+
+
+/**tb **/
+.tb{border-collapse:collapse;}
+.tb th,.tb td{border:1px solid #ddd;}
+.tb th{background-color:#f9f9f9;}
+
+
+
+/** tbj **/
+.tbjo{border:1px solid #ddd;}
+.tbj th{background-color:#f9f9f9;}
+.tbj th,.tbj td{border-width:1px 0 0 1px;border-style:solid;border-color:#ddd;}
+.tbj tr th:first-child,.tbj tr td:first-child{border-left:0;}
+.tbj thead tr:first-child th,.tbj.nothead tr:first-child td{border-top:0;}
+
+
+/**tbmn**/
+@media screen and (min-width:601px){
+.tbmn{display:table;border:1px solid #ccc;}
+.tbmn li{display:table-row;}
+.tbmn li.ths{background-color:#f9f9f9;}
+.tbmn .td{display:table-cell;padding:6px;border-left:1px solid #ccc;border-top:1px solid #ccc;}
+.tbmn li:first-child .td{border-top:0;}
+.tbmn .td:first-child{border-left:0;}
+}
+@media (max-width:600px){
+.tbmn{border:0;}
+.tbmn li{margin-top:12px;display:table;width:100%;border:1px solid #ccc;}
+.tbmn li.ths{display:none;}
+.tbmn li:nth-child(2){margin-top:0;}
+.tbmn .td{display:block;padding-right:6px;border-left:0;border-top:1px solid #ccc;}
+.tbmn .td:first-child{border-top:0;}
+.tbmn .td:before{content:attr(rel);margin-right:6px; display:inline-block;padding:6px;border-right:1px solid #ccc;background-color:#f9f9f9;}
+}
+
+
+
+
+
+
+
+
+
+
+/**1 table   无 */
+.tw th,.tw td{padding:5px;}
+
+
+/**2 table  口 */
+.tk{border:1px solid #ccc;}
+.tk th,.tk td{}
+
+
+/**3 table  三 */
+.ts{border-bottom:1px solid #ccc;}
+.ts th,.ts td{padding:5px;border-top:1px solid #ccc;}
+
+
+
+/**4 table  川 */
+.tc{border-right:1px solid #ccc;}
+.tc th,.tc td{padding:5px;border-left:1px solid #ccc;}
+
+
+
+
+
+/**5 table  日 **/
+.tr{border-width:1px 1px 0;border-style:solid;border-color:#ccc;}
+.tr th,.tr td{padding:5px;border-bottom:1px solid #ccc;}
+
+
+
+/**6 table 皿 */
+.tm{border-width:1px 0 1px 1px;border-style:solid;border-color:#ccc;}
+.tm th,.tm td{padding:5px;border-right:1px solid #ccc;}
+
+
+
+/**7 table  井 */
+.tj th,.tj td{padding:5px;border-left:1px solid #ccc;border-top:1px solid #ccc;}
+.tj th:first-child,.tj td:first-child{border-left:0;}
+.tj thead tr:first-child th,.tj thead tr:first-child td{border-top:0;}
+.tj.nohead tr:first-child th,.tj.nohead tr:first-child td{border-top:0;}
+
+
+/**8 table 田 **/
+.tt{border-width:0 1px 1px 0;border-style:solid;border-color:#ccc;}
+.tt th,.tt td{padding:5px;border-width:1px 0 0 1px;border-style:solid;border-color:#ccc;}
+
+
+
+
+
+/**7 table background **/
+
+/*横式背景*/
+.tg thead th{background:#f9f9f9;}
+.tg tbody tr:nth-child(odd) td{background:#fff;}
+.tg tbody tr:nth-child(even) td{background:#f9f9f9;}
+
+/*纵式背景*/
+.tg1 th{background-color:#f9f9f9;}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<h1>零、专用法 推荐此法</h1>
+
+<h2>
+1、tb默认做法
+</h2>
+
+a 标准表格做法
+<table class="tb tbpd6">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>默认</td>
+		</tr>
+	</tbody>
+</table>
+
+b 合并单元格行
+<table class="tb tbpd6">
+	<thead>
+		<tr>
+			<th scope="col">角度</th>
+			<th scope="col">字段</th>
+			<th scope="col">数值</th>
+		</tr>
+	</thead>
+	<tbody id="tbody4">
+		<tr>
+			<th rowspan="3">开户信息</th>
+			<td>开卡时间</td>
+			<td>2018-07-23</td>
+		</tr>
+		<tr>
+			<td>开卡地市</td>
+			<td>湖北</td>
+		</tr>
+		<tr>
+			<td>IMSI</td>
+			<td>9290230033</td>
+		</tr>
+		
+		<tr>
+			<th rowspan="3">套餐信息</th>
+			<td>套餐ID</td>
+			<td>444</td>
+		</tr>
+		<tr>
+			<td>套餐名称</td>
+			<td>常用月套餐</td>
+		</tr>
+		<tr>
+			<td>套餐总流量</td>
+			<td>300MB</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+c 合并单元格列
+<table class="tb tbpd6">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+			<th scope="col" colspan="3">第一季度</th>
+			<th scope="col" colspan="3">第二季度</th>
+		</tr>
+	</thead>
+	<tbody id="tbody5">
+		<tr>
+			<td>1</td>
+			
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+d 合并单元格 行与列
+<table class="tb tbpd6">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+			<th scope="col" colspan="3">第一季度</th>
+			<th scope="col" colspan="3">第二季度</th>
+			<th scope="col" colspan="3">第二季度</th>
+		</tr>
+	</thead>
+	<tbody id="tbody5">
+		<tr>
+			<td>1</td>
+			
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+<h2>
+2、tbj 井字做法， 若用此法请小心。
+</h2>
+<div class="tbjo">
+	<table class="tbj per100 tbpd9">
+		<thead>
+			<tr>
+				<th scope="col">序号</th>
+
+				<th scope="col">数量</th>
+				<th scope="col">单价（元）</th>
+				<th scope="col">总价（元）</th>
+
+				<th scope="col">操作</th>
+			</tr>
+		</thead>
+		<tbody id="tbody2">
+			<tr>
+				<td>1</td>
+
+				<td>22</td>
+				<td>3</td>
+				<td>66</td>
+
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+<!-- tbjo --></div>
+
+
+<h2>
+3、 tb 与 tbj的 合用</h2>
+
+<table class="tb per100 tac">
+				<tr>
+					<th class="pd6">终端请求参数</th>
+					<th class="pd6">校验方式</th>
+				</tr>
+				<tr>
+					<td class="pd6">号码：1064891575444</td>
+					<td>
+						<table class="tbj per100 nothead">
+							<tr>
+								<td class="pd6">1</td>
+								<td class="pd6">静态校验</td>
+								<td class="pd6"><i class="icz iz2 jdui">对</i></td>
+							</tr>
+							<tr>
+								<td class="pd6">2</td>
+								<td class="pd6">信令校验</td>
+								<td class="pd6"><i class="icz iz2 jdui">错</i></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="pd6">IMSI：460040915705444</td>
+					<td>
+						<table class="tbj per100 nothead">
+							<tr>
+								<td class="pd6">1</td>
+								<td class="pd6">静态校验</td>
+								<td class="pd6"><i class="icz iz2 jdui">对</i></td>
+							</tr>
+							<tr>
+								<td class="pd6">2</td>
+								<td class="pd6">信令校验</td>
+								<td class="pd6"><i class="icz iz2 jdui">错</i></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="pd6">IMEI：8651640258496934</td>
+					<td>
+						<table class="tbj per100 nothead">
+							<tr>
+								<td class="pd6">1</td>
+								<td class="pd6">静态校验</td>
+								<td class="pd6"><i class="icz iz2 jdui">对</i></td>
+							</tr>
+							<tr>
+								<td class="pd6">2</td>
+								<td class="pd6">信令校验</td>
+								<td class="pd6"><i class="icz iz2 jdui">错</i></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+4、tbmn 用 ul li 模拟table
+<ul class="tbmn per100">
+	<li class="ths">
+		<p class="td">姓名</p>
+		<p class="td">性别</p>
+		<p class="td">年龄</p>
+		<p class="td">学历</p>
+	</li>
+	<li>
+		<p class="td" rel="姓名:">王小龙</p>
+		<p class="td" rel="性别:">男</p>
+		<p class="td" rel="年龄:">33</p>
+		<p class="td" rel="学历:">本科</p>
+	</li>
+	<li>
+		<p class="td" rel="姓名:">银铃花</p>
+		<p class="td" rel="性别:">女</p>
+		<p class="td" rel="年龄:">30</p>
+		<p class="td" rel="学历:">研究生</p>
+	</li>
+</ul>
+
+
+
+
+<h1>
+一、造型法：边沿8造型： 无口三川 日皿井田。 不再推荐此法。
+</h1>
+
+<table class="tw">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<br />
+
+<table class="tk">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>2口</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<br />
+
+<table class="ts">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>3三</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+<br />
+<table class="tc">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>川</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+<br />
+<table class="tr">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>5日</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+
+<br />
+<table class="tm">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>7皿</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+<br />
+<table class="tj">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>6井</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+<br />
+
+<table class="tt">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>8田</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>1无</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<br />
+
+
+---------------------------------------<br />
+
+
+
+
+
+
+
+
+
+
+
+<h1>二、背景</h1>
+
+<table class="tg tt per100">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody1">
+		<tr>
+			<td>1</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>横背景</td>
+		</tr>
+		<tr>
+			<td>2</td>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<br />
+<table class="tg1 tt per100">
+
+	<tr>                                            
+		<th scope="row">用户数：</th>
+		<td>竖背景</td>
+	</tr>
+
+	<tr>                                            
+		<th scope="row">购卡数：</th>
+		<td>54211</td>
+	</tr>
+	<tr>                             
+		<th scope="row">停机数： </th>
+		<td>21</td>
+	</tr>
+</table>
+
+<br/>
+
+<table class="tt tg1 per100">
+	<thead>
+		<tr>
+			<th scope="col">序号</th>
+
+			<th scope="col">数量</th>
+			<th scope="col">单价（元）</th>
+			<th scope="col">总价（元）</th>
+
+			<th scope="col">操作</th>
+		</tr>
+	</thead>
+	<tbody id="tbody3">
+		<tr>
+			<th>1</th>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td>横竖背景</td>
+		</tr>
+		<tr>
+			<th>2</th>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td></td>
+		</tr>
+		<tr>
+			<th>3</th>
+
+			<td>22</td>
+			<td>3</td>
+			<td>66</td>
+
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<h1>
+三、对齐方式</h1>
+<table class="tt per100">
+
+<tr>
+<th class="tal">左对齐</th>
+<th class="tac">居中</th>
+<th class="tar">右对齐</th>
+</tr>
+
+<tr>
+<td class="tal">越亮传奇科技股份有限公司</td>
+<td class="tac">广州市</td>
+<td class="tar">2018-07-22</td>
+</tr>
+
+
+</table>
+<br />
+
+
+
+
+
+
+
+
+
+</body>
+</html>

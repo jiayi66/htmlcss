@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简单表格处理 横向 覆盖法</title>
+
+<link rel="stylesheet" href="../../c-widget/refer/css/reset.css"/>
+
+
+<style>
+
+/**table shape**/
+.tb{width:100%;border-width:1px 0 0 1px;border-style:solid;
+ font-size:14px;}
+.tb th{padding:5px;border-width:0 1px 1px 0;border-style:solid;line-height:20px;white-space: nowrap;}
+.tb td{padding:5px;border-width:0 1px 1px 0;border-style:solid;line-height:20px;white-space: nowrap;}
+
+/*default is center left */
+.tbl th{text-align:left;}/*left left*/
+.tbc td{text-align:center;}/*center center*/
+.tbr th{text-align:right; background-image:none;}/*right left*/
+
+/**table color default gray **/
+.tb,.tb th,.tb td{border-color:#ccc;}
+.tb th{background:#E4E4E4;}
+.tb tr.odd td,.tb tr:nth-child(odd) td{background:#F3F4F5;}
+.tb tr.even td,.tb tr:nth-child(even) td{background:#fff;}
+
+/**table 2 colorful **/
+.tb2,.tb2 th,.tb2 td{border-color:#8BB4E8;}
+.tb2 th{background:#BCD7F9;}
+.tb2 tr.odd td,.tb2 tr:nth-child(odd) td{background:#ebf0f9;}
+.tb2 tr.even td,.tb2 tr:nth-child(even) td{background:#fff;}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<p>举例1</p>
+<table class="tb tbc" cellspacing="0">
+
+<tr>
+<th scope="col">3english</th>
+<th scope="col">3汉字</th>
+<th scope="col">客户名称</th>
+<th scope="col">告警类型</th>
+<th scope="col">告警次数</th>
+</tr>
+<tr>
+<td rowspan="3">3</td>
+<td><span class="ib w8 el">广州市供电局有限公司广州市供电局有限公司</span></td>
+<td>3323</td>
+<td>广州市供电局有限公司</td>
+<td>广州</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td rowspan="3">3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</table>
+<br />
+
+
+
+
+<table class="tb tbr tb2">
+<tr>                                            
+<th width="50%" scope="row">企业数量：</th>
+<td width="50%">1211</td>
+</tr>
+<tr>                                            
+<th scope="row">购卡数：</th>
+<td>54211</td>
+</tr>
+<tr>                             
+<th scope="row">停机默认总数： </th>
+<td>21</td>
+</tr>
+</table>
+
+
+
+
+<div class="ox" style="height:100px;">
+<table class="tb tbc">
+<tr>   
+<th scope="col">统计时间</th>
+<th scope="col">行业</th>
+<th scope="col">政企客户</th>
+<th scope="col">终端厂商</th>
+<th scope="col">终端型号</th>
+<th scope="col">告警类型</th>
+<th scope="col">告警代码</th>
+<th scope="col">告警级别</th>
+<th scope="col">告警次数</th>
+</tr>
+
+<tr>
+<td>2013-06</td>
+<td>hy</td>
+<td><span class="ib w10 el"><a href="#company.html">广州市供电局有限公司广州市供电局有限公司</a></span></td>
+<td><span class="ib w10 el">我是终端厂商的名字哈哈哈哈哈哈啊啊哈</span></td>
+<td>zx</td>
+<td>用户状态告警</td>
+<td>卡状态告警</td>
+<td>严重</td>
+<td>174</td>
+</tr>
+
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
