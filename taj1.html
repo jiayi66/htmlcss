@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<meta name="renderer" content="webkit|ie-stand"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=edge,chrome=1"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, email=no"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="x5-page-mode" content="app"/>
+<meta name="browsermode" content="application"/>
+<meta name="wap-font-scale" content="no"/>
+<link href="skin/a_base.css" rel="stylesheet"/>
+<meta name="author" content="feilong.org"/>
+<style>
+
+.taj{text-align:justify;text-justify:inter-ideograph;overflow:hidden;}
+.taj:after{content:'';display:inline-block;width:100%;} 
+
+.taf{text-align:justify;text-align-last:justify;text-justify:distribute-all-lines;}
+.taf2{text-align:justify;text-align-last:justify;text-justify:inter-ideograph;}
+
+.box{ margin-top:30px;width:300px;background-color:#eee;}
+
+
+
+
+</style>
+<title>两端对齐 justify 测试兼容火狐谷歌Safari 安卓IOS</title>
+</head>
+<body id="jBase">
+
+<h1>两端对齐 justify</h1>
+
+<p>此例子 全面深入测试 如果让 文字左右两端对齐。特别是兼容ios或safari浏览器，该怎么办的解决方案。</p>
+
+<p>text-align:justify;  不处理块内的最后一行文本。
+包括块内仅有一行文本，既是第一行也是最后一行。</p>
+
+<p>注意：text-justify 主要针对 IE浏览器中的汉字 进行处理！必须和text-align:justify一起使用才有效。</p>
+
+<p>汉字最好是用加空格打散，才能保证在 Safari 里 也能 完完全全的两端对齐! </p>
+
+
+<h2>方法一：伪元素加一行，让 text-align:justify 对非最后一行起作用。此法最佳！但是，会多一行高度！</h2>
+<div class="taj box" id="ddd">
+如何设置文本两端对齐呢？
+如何设置文本两端对齐呢？
+如何设置文本两端对齐呢？对齐呢对齐呢对齐呢对齐呢对齐呢对呢
+</div>
+
+<div class="taj box">
+how to justify words
+how to justify words
+how to justify wordswords
+</div>
+
+
+
+
+<h2>方法二： text-align:justify  和 text-align-last:justify; 结合起来用。但是Safari不支持 text-align-last. 此法不适合IOS！</h2>
+<div class="taf box">
+how to justify words
+how to justify words
+how to justify wordswords
+</div>
+
+<div class="taf box">
+如何设置文本两端对齐呢？
+如何设置文本两端对齐呢？
+如何设置文本两端对齐呢？对齐呢对齐呢
+</div>
+
+
+
+<div class="taf2 box">
+how to justify words
+how to justify words
+how to justify wordswords
+</div>
+
+<div class="taf2 box" id="eee">
+如何设置文本两端对齐呢？
+如何设置文本两端对齐呢？
+如何设置文本两端对齐呢？对齐呢？对齐呢
+</div>
+
+
+
+
+
+<script>
+
+
+a0dasai(ddd);
+a0dasai(eee);
+
+function a0dasai(o){
+	var ddstr = o.innerHTML.split('').join(' ');
+	o.innerHTML=ddstr;
+}
+
+
+
+</script>
+
+
+</body>
+</html>
