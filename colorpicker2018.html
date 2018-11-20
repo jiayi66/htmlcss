@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<meta name="renderer" content="webkitie-stand"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=edge,chrome=1"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, email=no"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="x5-page-mode" content="app"/>
+<meta name="browsermode" content="application"/>
+<meta name="wap-font-scale" content="no"/>
+
+<style>
+
+
+
+.ipc{position:relative;display:block;}
+.ipcsee{position:absolute;right:0;top:0;width:30px;height:100%;
+border-left:1px solid #ccc;}
+.ipcval{position:absolute;right:0;top:0;width:100%;height:100%;
+padding:0; opacity:0}
+.ipctxt{position:relative; margin-right:32px;display:block;
+height:100%; padding:0px 6px;}
+.fz1 .ipc, .ipc1{height:20px;line-height:20px;}
+.fz2 .ipc, .ipc2{height:26px;line-height:26px;}
+.fz3 .ipc, .ipc3{height:32px;line-height:32px;}
+.fz4 .ipc, .ipc4{height:38px;line-height:38px;}
+.fz5 .ipc, .ipc5{height:44px;line-height:44px;}
+.ipca{border:1px solid #ccc;background-color:#fff;}
+
+
+</style>
+
+
+
+<title>HTML5 原生拾色器</title>
+</head>
+<body id="jBase">
+
+
+<form method="get" action="">
+
+	<input name="kgbg[]" value="#00ff00" type="color">
+
+	<input type="submit" value="提交" />
+
+</form>
+
+
+
+<div class="all">
+
+
+<em class="ipc ipc2 ipca">
+<i class="ipcsee"></i>
+<input class="ipcval" type="color" maxlength="7" id="" name="fipc" value="#ff0000" />
+<b class="ipctxt" contenteditable></b>
+</em>
+
+<!-- all --></div>
+<script src="js/jq.js"></script>
+<script>
+
+
+a0ipcs();
+
+//模拟原生设色器
+function a0ipcs(){
+	var ipco=$('.ipcval'),ipcv=ipco.val();
+	a0ipc(ipco,ipcv);
+	
+	$('.all').on('change','.ipcval',function(ev){
+		var ipco=$(this),ipcv=ipco.val();
+		a0ipc(ipco,ipcv);
+	});
+	
+	$('.all').on('keyup','.ipctxt',function(ev){
+		var ipco=$(this).closest('.ipc').find('.ipcval'),ipcv=$(this).html();
+		var ipcsee=$(this).closest('.ipc').find('.ipcsee')
+		if(ipcv.length==7){
+			ipco[0].value=ipcv;
+			ipcsee.css('background-color',ipcv);
+		}
+	});
+	
+}/*0.5*/
+
+function a0ipc(o,val){
+	var ipc=o.closest('.ipc');
+	var ipctxt=ipc.find('.ipctxt'),ipcsee=ipc.find('.ipcsee');
+	ipcsee.css('background-color',val);
+	ipctxt.html(val);
+}/*0.5*/
+
+
+
+
+
+</script>
+
+</body>
+</html>
