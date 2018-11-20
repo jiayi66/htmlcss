@@ -1,0 +1,138 @@
+@charset "utf-8";
+/*  
+Jenny.css for Compamy base old 包括：重置 范例 此文件已经过时,请用0-door.css参考
+Author: Jenny
+Author URI: http://yinlinghua.com
+Version: 20120601-20120612
+*/
+
+/* 
+此为 basic.css, 包括：重置 范例 布局
+*/
+
+/**** Jenny css 重置 ****/
+body{margin:0;padding:0;color:#555;font-size:12px;background:url(img/index_bg.jpg) repeat-x top center;
+font-family:"微软雅黑","宋体",Arial,Helvetica,Verdana,sans-serif;}
+ul,ol,li,dl,dt,dd{margin:0;padding:0;list-style-type:none;}
+h1,h2,h3,h4,div,p,strong,em,span,small,abbr{margin:0;padding:0;font-style:normal;font-size:12px;}
+form,label,input,button,select,textarea,img{margin:0;padding:0;border:0;vertical-align:middle;}
+sup{vertical-align:text-bottom;}
+p{font-size:12px;}
+:focus {outline:0;}
+
+
+a:link{color:#034EA2;text-decoration:none;}
+a:visited{color:#034EA2;text-decoration:none;}
+a:hover{color:#d40e16;text-decoration:underline;}
+a:active{color:#d40e16;text-decoration:none;}
+
+
+
+
+/**** Jenny css 范例 ****/
+
+/*** 修补 ***/
+
+/** 溢出 **/
+.nowrap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;} /* 不换行溢出, 则自动文本省略或裁掉 ellipsis 或 clip */
+.autobr{word-wrap:break-word;overflow:hidden;} /* 溢出, 则自动折行 */
+
+/** 浮动 **/
+.clear{clear:both;height:0;line-height:0;} /* 在浮动和不浮动之间加盒子进行人工修补 */
+
+.fix{overflow:hidden;zoom:1;}/* overflow for ie, zoom for firefox */
+.fix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
+
+/* End hide from IE Mac
+.fix{display:inline-block;}
+.fix{display:block;} 
+*/
+
+/* new clearfix no use at present */
+.clearfix:after {display:block;height:0;content:'';font-size:0;visibility:hidden;clear:both;}
+* html .clearfix{zoom:1;} /* IE6 */
+*:first-child+html .clearfix{zoom:1;} /* IE7 */
+
+/*worepress3+ bug fix 
+html{margin-top:0 !important;}
+* html body{margin-top:0 !important;}
+*/
+
+/** 居中 **/
+.center{display:block;width:980px;margin:0 auto;}/* 块状盒子水平居中,宽度为百分比或具体值 */
+.middle{display:table-cell;background-color:#000;vertical-align:middle;
+*display:block;*font-family:Arial;*font-size:218px;/* 约为高度的0.873 */}
+/* 盒子内图片垂直居中,修改背景色,计算 *font-size */
+
+
+
+/*** 特效 ***/
+
+/** 透明 **/
+.opacity{filter:alpha(opacity=90);opacity:0.9;} /* 盒子透明度 */
+img{max-width:100%;} /* 图片自适应宽度，前提是：不能带内置宽高属性 */
+img{alpha(opacity=90);opacity:0.9;}/* 图片透明度初始状态 */
+img:hover{alpha(opacity=100);opacity:1;} /* 图片透明度悬停变化 */
+
+/** 圆角 **/
+.radius{ -moz-border-radius:3px;-khtml-border-radius:3px;
+-webkit-border-radius:3px;border-radius:3px; } /* 四方皆圆角 */
+.radius-b{ -moz-border-top-left-radius:5px;-khtml-border-top-left-radius:5px;
+-webkit-border-top-left-radius:5px;border-top-left-radius:5px;
+-moz-border-top-right-radius:5px;-khtml-border-top-right-radius:5px;
+-webkit-border-top-right-radius:5px;border-top-right-radius:5px; } /* 北 两圆角 */
+.radius-d{ -moz-border-top-right-radius:5px;-khtml-border-top-right-radius:5px;
+-webkit-border-top-right-radius:5px;border-top-right-radius:5px;
+-moz-border-bottom-right-radius:5px;-khtml-right-bottom-radius:5px;
+-webkit-border-bottom-right-radius:5px;border-bottom-right-radius:5px; } /* 东 两圆角 */
+.radius-n{ -moz-border-bottom-right-radius:5px;-khtml-border-bottom-right-radius:5px;
+-webkit-border-bottom-right-radius:5px;border-bottom-right-radius:5px;
+-moz-border-bottom-left-radius:5px;-khtml-border-bottom-left-radius:5px;
+-webkit-border-bottom-left-radius:5px;border-bottom-left-radius:5px; } /* 南 两圆角 */
+.radius-x{ -moz-border-bottom-left-radius:5px;-khtml-border-bottom-left-radius:5px;
+-webkit-border-bottom-left-radius:5px;border-bottom-left-radius:5px;
+-moz-border-top-left-radius:5px;-khtml-border-top-left-radius:5px;
+-webkit-border-top-left-radius:5px;border-top-left-radius:5px; } /* 西 两圆角 */
+
+/** 盒子投影 **/
+.shadow{-moz-box-shadow:0px 0 5px #333;-webkit-box-shadow:0px 0 5px #333;box-shadow:0px 0 5px #333;} /* 常用中投影*/
+.shadow-da{-moz-box-shadow:0px 0 8px #333;-webkit-box-shadow:0px 0 8px #333;box-shadow:0px 0 8px #333;} /* 常用大投影*/
+.shadow-xiao{border:1px solid #fff;
+-moz-box-shadow:0px 0 1px #333;-webkit-box-shadow:0px 0 1px #333;box-shadow:0px 0 1px #333;} /* 常用小投影, 用投影和border做的 模糊银边效果,内部尚未圆角，外部已有模糊圆角效果 */
+.shadow-xy{-moz-box-shadow:0px 5px 0 #50b;-webkit-box-shadow:0px 5px 0 #50b;box-shadow:0px 5px 0 #50b;} /* 投影做的 假border  有x 或 y 值 ，z为0 */
+.shadow-z{-moz-box-shadow:0px 0 60px #f30;-webkit-box-shadow:0px 0 60px #f30;box-shadow:0px 0 60px #f30;} /* 高度模糊 z值大 */
+
+/** 文字阴影 **/
+.textshadow{text-shadow:1px 1px 1px #fff;}
+
+/** 跑马灯 **/
+.marquee{white-space:nowrap;overflow:-webkit-marquee;width:300px;
+-webkit-marquee-direction:forwards;
+-webkit-marquee-speed:slow;
+-webkit-marquee-style:alternate;
+}
+
+
+
+
+
+/**** 以下css写在style.css 具体项目css 主样式表中 ****/
+
+/**** Jenny 布局 ****/
+
+/**** Jenny 首页 index.html ****/
+
+/**** Jenny 博客类页 jblogcat.html ****/
+/**** Jenny 博客详情页 jblog.html ****/
+
+/**** Jenny 产品类页 jgoodcat.html ****/
+/**** Jenny 产品详情页 jgood.html ****/
+
+/**** Jenny 案例类页 janlicat.html ****/
+/**** Jenny 案例详情页 janli.html ****/
+
+/**** 单页 jpage.html ****/
+/**** 特殊单页 jpage-liuyan.html ****/
+
+
+/*over 20120516-1230 Jenny Guangzhou */

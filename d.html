@@ -1,0 +1,265 @@
+
+
+<!-- 下面是 行业监控 指标弹层 -->
+<script>
+
+//曲线 x轴的 刻度个数
+var jkdays=7;
+
+
+
+
+//杭州奔驰车业
+var jksj1=[
+	{
+		name:'附着成功率',
+		type: 'line',barWidth :10,
+		smooth:true,
+		data:[90, 94, 85, 96, 97, 99, 99]
+	},
+	{
+		name:'PDP成功率',
+		type: 'line',
+		smooth:true,
+		data:[89, 97, 99, 98, 99, 99, 99]
+	}
+];
+var jkwd1='杭州奔驰车业';
+var jkrz1=['7-1','7-2', '7-3', '7-4', '7-5', '7-6', '7-7'];
+var jkdw1='%';
+
+
+
+//杭州银联
+var jksj2=[
+	{
+		name:'TCP时延',
+		type: 'line',barWidth :10,
+		smooth:true,
+		data:[99, 98, 99, 98, 98, 99, 99]
+	},
+	{
+		name:'HTTP成功率',
+		type: 'line',
+		smooth:true,
+		data:[99, 98, 97, 97, 98, 98, 96]
+	}
+];
+var jkwd2='杭州银联';
+var jkrz2=['7-1','7-2', '7-3', '7-4', '7-5', '7-6', '7-7'];
+var jkdw2='%';
+
+
+
+//杭州供电局
+var jksj3=[
+	{
+		name:'TCP成功率',
+		type: 'line',barWidth :10,
+		smooth:true,
+		data:[98, 97, 98, 99, 99, 98, 99]
+	},
+	{
+		name:'HTTP成功率',
+		type: 'line',
+		smooth:true,
+		data:[97, 99, 98, 97, 98, 99, 97]
+	}
+];
+var jkwd3='杭州供电局';
+var jkrz3=['7-1','7-2', '7-3', '7-4', '7-5', '7-6', '7-7'];
+var jkdw3='%';
+
+
+
+//浙江海格通信电子
+var jksj4=[
+	{
+		name:'TCP时延',
+		type: 'line',barWidth :10,
+		smooth:true,
+		data:[99, 98, 98, 99, 98, 90, 99]
+	},
+	{
+		name:'HTTP时延',
+		type: 'line',
+		smooth:true,
+		data:[97, 98, 99, 97, 98, 99, 97]
+	}
+];
+var jkwd4='浙江海格通信电子';
+var jkrz4=['7-1','7-2', '7-3', '7-4', '7-5', '7-6', '7-7'];
+var jkdw4='s';
+
+
+
+
+
+
+//杭州公安
+var jksj5=[
+	{
+		name:'HTTP速率/Mbps',
+		type: 'line',barWidth :10,
+		smooth:true,
+		data:[1, 1, 1, 0.77, 0.99, 0.9, 1]
+	},
+	{
+		name:'HTTP流量/GB',
+		type: 'line',
+		smooth:true,
+		data:[6, 7, 8, 7, 8, 9, 10]
+	}
+];
+var jkwd5='杭州公安';
+var jkrz5=['7-1','7-2', '7-3', '7-4', '7-5', '7-6', '7-7'];
+var jkdw5='s';//Mbps
+
+
+//杭州摩拜
+var jksj6=[
+	{
+		name:'附着成功率',
+		type: 'line',barWidth :10,
+		smooth:true,
+		data:[90, 99, 96, 98, 97, 98, 99]
+	},
+	{
+		name:'PDP成功率',
+		type: 'line',
+		smooth:true,
+		data:[89, 90, 98, 99, 99, 98, 99]
+	}
+];
+var jkwd6='杭州摩拜';
+var jkrz6=['7-1','7-2', '7-3', '7-4', '7-5', '7-6', '7-7'];
+var jkdw6='%';
+
+
+
+
+
+
+
+
+/** 开始图表插件啦 ***/
+
+
+
+
+
+
+var j9lnks=window.document.querySelectorAll('.j9lnk');/*IE8+*/
+j9lnks.onclick=function(){
+	var j9rel =this.getAttribute('rel');
+	console.log('j9rel=',j9rel);
+	a0jk888(j9rel);
+};
+
+
+
+function a0jk888(j9rel){
+  switch(j9rel){
+		case '1':
+		  a0Tan666('j9tan',jkwd1,jkrz1,jkdw1,jksj1);
+		  break;
+		  case '1':
+		  a0Tan666('j9tan',jkwd1,jkrz1,jkdw1,jksj1);
+		  break;
+		  case '2':
+		  a0Tan666('j9tan',jkwd2,jkrz2,jkdw2,jksj2);
+		  break;
+		  case '3':
+		  a0Tan666('j9tan',jkwd3,jkrz3,jkdw3,jksj3);
+		  break;
+		  case '4':
+		  a0Tan666('j9tan',jkwd4,jkrz4,jkdw4,jksj4);
+		  break;
+		  case '5':
+		  a0Tan666('j9tan',jkwd5,jkrz5,jkdw5,jksj5);
+		  break;
+		case '6':
+		  a0Tan666('j9tan',jkwd6,jkrz6,jkdw6,jksj6);
+		  break;
+		}
+}/*0.5*/
+
+
+
+function a0Tan666(rongqi,weidu,rizi,danwei,shuju){
+
+ // 1、路径配置
+	require.config({
+		paths: {
+			echarts: './ec'
+		}
+	});
+	
+	// 2、使用开始
+	require(['echarts',
+			'echarts/chart/line', // 按需加载 line.js
+			'echarts/chart/bar'
+		], function (ecgo) {
+			//console.log('ecgo=',ecgo);
+
+	// 基于准备好的dom，初始化echarts图表
+	var j9ecobj = ecgo.init(document.getElementById(rongqi)); 
+
+	var j9ecopt = {
+		title: {
+			show:0,
+			text: weidu,
+			textStyle:{fontSize:12}
+		},
+		tooltip : {
+			trigger: 'axis',
+			
+			axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+				type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+			}
+		},
+		legend: {
+			orient: 'horizontal',
+			x: '80px',y: '20px',
+
+			data: ['物联卡总数', '在线用户数']
+		},
+		toolbox: {
+			show : false,
+			orient: 'vertical', 
+			x: 'right',y: 'center',
+				
+			feature : {
+				magicType : {show: true, type: ['line', 'bar','stack', 'tiled']},//	
+				//saveAsImage : {show: true}
+			}
+		},
+		grid: {x2: '30'},
+
+		calculable : true,
+		xAxis : [
+			{
+				type : 'category',
+				boundaryGap: 0,
+			data: rizi
+			}
+		],
+		yAxis : [
+			{
+				type : 'value',
+			axisLabel: {
+				formatter: '{value} '+danwei
+			}
+			}
+		],
+		series : shuju
+	};
+
+	// 为echarts对象加载数据 
+	j9ecobj.setOption(j9ecopt); 
+	});
+  
+}/*0.5*/
+
+                    
+</script>

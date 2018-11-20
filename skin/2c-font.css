@@ -1,0 +1,233 @@
+@charset "utf-8";
+/*****  
+2b-font.css for the CSS Temple. Do not use it directly.
+试验写法，不可实际直接使用
+Version: fl20140814gz
+Author: Feilong & Spring
+Author URI: http://feilong.org
+*****/
+
+
+/***  二、盒子内容：  2b-font.css ***/
+
+
+/** 3前景  主要指盒子里的 字符. 但也可以说包括盒子里所有内容,比如 子盒子. 飞龙提示: img是特殊盒子，本身类似背景，却属于前景
+ 3前景： 字符的颜色、形状（字号粗细正斜字体）、摆放（字符行高 水平对齐、垂直对齐、字符间距、换行与否、溢出咋办）、装饰 **/
+.foreground{/*line-height:22px;*/
+color:#666;font-size:12px;font-weight:400;font-style:italic;
+font-family:'Microsoft YaHei','SimSun','SimHei',Tahoma,Arial,Helvetica,Verdana,sans-serif;
+text-align:center;vertical-align:bottom;letter-spacing:1px;white-space:nowrap;overflow:hidden;
+text-decoration:underline;cursor:pointer;outline:none;
+}
+.font{font:italic bold 12px/30px arial,sans-serif;}/*简写法. 比较少用*/
+
+/*常见写法 rgb cmy op kw tr */
+.cr{color:#f00;}.ck{color:#000;}.ctr{color:transparent!important;}/*透明*/
+.fs14{font-size:14px;}.fs16{font-size:16px;}
+.fw4{font-weight:400;}.fw6{font-weight:600;}
+.ffy{font-family:'Microsoft YaHei';}.ffs{font-family:'SimSun';}
+.fsi{font-style:italic;}.fsn{font-style:normal;}
+.tal{text-align:left;}.tac{text-align:center;}.tar{text-align:right;}
+.vat{vertical-align:top;}.vab{vertical-align:bottom;}.val{vertical-align:baseline;}
+
+/*使用极少的属性:
+font-variant, font-stretch 
+http://www.w3school.com.cn/cssref/pr_font_font.asp
+http://www.w3chtml.com/css3/properties/font
+*/
+
+/* 前景 a 链接的优先顺序
+:link > :visited > :focus -> :hover -> :active */
+a:link{color:#666;text-decoration:none;}
+a:visited{color:#777;text-decoration:none;}
+a:hover{color:#f60;text-decoration:underline;}
+a:active{color:#f90;text-decoration:underline;}
+
+a:focus,a:active{outline:0 none}
+:focus,:active{outline:0 none}
+/*:active{outline:none;}:hover{outline:none;} tab 可用性*/
+
+/** 4背景写法 **/
+.bg{background:#fff url(flnav.png) no-repeat center center/100% 100%;
+background-color:#f00;background-image:url(flnav.png);
+background-repeat:no-repeat;background-position:center 0;
+background-size:cover;background-attachment:fixed;}
+
+.bg1{background:#fff url(flnav.png) no-repeat center center/cover;}/*简写4字决: 色 图 铺 位/. 位是 先写x轴,再写y轴*/
+.bg2{background:#fff url(flnav.png) repeat-x 0 bottom;}/* x y , left也用0，top一般用0.*/
+.bg3{background:#fff url(flnav.png) repeat-y right 0;}
+.bg4{background:url(flnav.png) no-repeat center 0;}
+.bg5{background-color:#fff;background-image:url(flnav.png);background-repeat:no-repeat;background-position:center 0;}
+.bg6{background-image:url(flnav.png);background-position: center 0;background-size:cover;background-attachment:fixed;}
+.bg7{background-image:url(flnav.png);background-repeat:no-repeat;background-position:0 0;background-size:50% 50%;}
+
+
+
+
+/**** font.css. DO NOT use directly ****/
+
+
+
+/*** color 字体颜色通用写法  12种代表色 ***/
+
+
+/** 彩色系 **/
+/*色光加法三原色 rgb */
+.cr{color:#f00;}/*红*/
+.cg{color:#008000;}/*绿*/
+.cb{color:#00f;}/*蓝*/
+/*色料打印减法三原色 cmy+k黑 */
+.cc{color:#00ffff;}/* 青 */
+.cm{color:#f0f;}/* 品红 */
+.cy{color:#ff0;}/* 黄 */
+/*色环6色:红黄蓝绿 + 橙紫 */
+.co{color:#ffa500;}/*  橙 */
+.cp{color:#800080;}/*  紫 */
+/** 灰度系 **/
+.ck{color:#000;}/*黑*/
+.ck1{color:#333;}/*灰*/
+.cw{color:#fff;}/*白*/
+.cw1{color:#ccc;}/*银*/
+/** 特殊色 **/
+.ctr{color:transparent!important;}/*字符透明占位2*/
+
+
+
+/***font-size ***/
+.fs10{font-size:10px;}
+.fs12{font-size:12px;}
+.fs14{font-size:14px;}
+.fs16{font-size:16px;}
+.fs18{font-size:18px;}
+.fs20{font-size:20px;}
+.fs22{font-size:22px;}
+.fs24{font-size:24px;}
+
+
+
+/*** font-weight ***/
+.fw4{font-weight:400!important;}
+.fw6{font-weight:600 !important;}
+
+
+
+/*** font-family ***/
+.ffy{font-family:"Microsoft YaHei";}
+.ffs{font-family:"Simsun";}
+
+
+
+/*** font-style ***/
+.fsi{font-style:italic!important;}
+.fsn{font-style:normal!important;}
+
+
+
+/*** text-align ***/
+.tal{text-align:left !important;}
+.tac{text-align:center !important;}
+.tar{text-align:right !important;}
+
+
+
+/*** vertical-align ***/
+.vat{vertical-align:top!important;}
+.vam{vertical-align:middle !important;}
+.vab{vertical-align:bottom !important;}
+.val{vertical-align:baseline;}
+
+
+/***letter-spacing***/
+.ls1{letter-spacing:1px;}.ls2{letter-spacing:2px;}.ls3{letter-spacing:3px;}
+.ls4{letter-spacing:4px;}.ls5{letter-spacing:5px;}.ls6{letter-spacing:6px;}
+
+
+/*** background ***/
+
+
+/** 背景颜色通用写法 12代表色。与 font关系紧密，飞龙将之同归于 2b-font.css **/
+
+
+/** 彩色系  rgb cmy op kw tr  */
+/*色光加法三原色 rgb */
+.bgr{background-color:#f00;}/*红*/
+.bgg{background-color:#008000;}/*绿*/
+.bgb{background-color:#00f;}/*蓝*/
+/*色料打印减法三原色 cmy+k黑 */
+.bgc{background-color:#00ffff;}/* 青 */
+.bgm{background-color:#f0f;}/* 品红 */
+.bgy{background-color:#ff0;}/* 黄 */
+/*色环6色:红黄蓝绿 + 橙紫 */
+.bgo{background-color:#ffa500;}/*  橙 */
+.bgp{background-color:#800080;}/*  紫 */
+/** 灰度系  **/
+.bgk{background-color:#000;}/*黑*/
+.bgk1{background-color:#333;}/*灰*/
+.bgw{background-color:#fff;}/*白*/
+.bgw1{background-color:#ccc;}/*银*/
+/** 特殊背景 **/
+.bgtr{background:transparent !important;}/*背景透明 常用 */
+.bgno{background:none!important;}/*无背景*/
+.bgctr{background-color:transparent!important;}/*透明色*/
+.bgino{background-image:none!important;}/*无背景图*/
+
+
+
+/*** 色块举例 按项目需要而定 ***/
+.default{background:#fff;color:gray;}
+.almost{background:#fff;color:#fff;}
+
+.good{background:#fff;color:green;}
+.yes{background:#fff;color:green;}
+.ok{background:#fff;color:green;}
+.right{background:#fff;color:green;}
+.passed{background:#fff;color:green;}
+.success{background:#fff;color:green;}
+
+.bad{background:#fff;color:#F30;}
+.no{background:#fff;color:#F30;}
+.error{background:#fff;color:#F30;}
+.wrong{background:#fff;color:#F30;}
+.alert{background:#fff;color:#F30;}
+.fail{background:#fff;color:#F30;}
+
+
+/*** font 9种代表色 ***/
+
+.c1{color:#fff !important;}
+.c2{color:#000;}
+.c3{color:#59b6f3;}
+.c4{color:#3C6;}
+.c5{color:#ffed28 !important;}
+.c6{color:#666!important;}
+.c7{color:#db051b !important;}
+.c8{color:#888 !important;}
+.c9{color:#6d2642 !important;}.c9a{color:#b27bc3 !important;}
+.ctr{color:transparent!important;}
+
+
+/**** background ****/
+.bgno{background:none!important;}
+.bgino{background-image:none!important;}
+.bgtr{background:transparent !important;}
+.bgctr{background-color:transparent!important;}
+
+.bg1{background-color:#fff !important;}
+.bg2{background-color:#000;}
+.bg3{background-color:#4199d4;}
+.bg4{background-color:#3C6;}
+.bg5{background-color:#ffed28 !important;}
+.bg6{background-color:#666!important;}
+.bg7{background-color:#db051b !important;}
+.bg8{background-color:#888 !important;}
+.bg9{background-color:#6d2642 !important;}.bg9a{background-color:#b27bc3 !important;}
+
+.fi{background-image:url(hei60.png);}
+.rou{display:block;width:96%;padding:3px 2%}
+.cov{background-position:center bottom;background-size:cover;background-attachment:fixed}
+
+
+.rgba{color:rgba(195, 224, 242,0.4);background:rgba(255, 255, 255,0.4);}
+
+
+/*****end of 2b-font.css *****/

@@ -1,0 +1,163 @@
+@charset "utf-8";
+/*  
+Theme Name:Baoming
+Theme URI: http://www.yinlinghua.com
+Description: wordpress theme for photo or product usage. By <a href="http://yinlinghua.com">Jenny</a>.20120226.Good lucks!
+Version: 20120601-20120612 已经过时
+Author: Jenny html css,Feilong js php
+Tags: company theme, product theme, photo theme
+*/
+
+/* 
+此为 style.css, 包括：
+
+index首页, 
+jblogcat博客类页 jblog博客详情页, 
+jgoodcat产品类页 jgood产品详情页, 
+janlicat案例类页 janli案例详情页, 
+jpage单页 jpage-liuyan特殊单页(留言)
+
+*/
+
+
+
+/**** Jenny 布局 ****/
+
+/*** 网页布局的核心：***/
+#wrap{width:970px;margin:0 auto;}
+#main{width:668px;min-height:660px;float:left;}
+#side{width:295px;min-height:660px;float:right;}
+
+/** 首页专用网页布局： **/
+#wrapindex{width:970px;margin:0 auto;}
+#mainindex{width:560px;min-height:660px;float:left;}
+#sideindex{width:200px;min-height:660px;float:right;}
+#sideindex2{width:200px;min-height:660px;float:right;}
+
+/** 某频道专用网页布局： **/
+#wrapblog{width:970px;margin:0 auto;}
+#mainblog{width:760px;min-height:660px;float:left;}
+#sideblog{width:200px;min-height:660px;float:right;}
+
+
+
+
+
+/** all **/
+#all{}
+
+
+/**header**/
+#header{width:1000px; margin:0 auto;padding-top:40px;}
+#header{overflow:hidden;zoom:1;}
+#header:after{content:''; height:0; line-height:0; clear:both; visibility:hidden;}
+#header h1{margin-left:20px;float:left;background:#f0f0f0;}
+#header h1 a{}
+#header h1 a img{width:214px; height:60px;}
+
+/**nav**/
+#nav{ margin-bottom:20px;padding-left:260px;background:#A4BD42;}
+#nav ul{display:block;}
+#nav ul{overflow:hidden;zoom:1;}
+#nav ul:after{content:''; height:0; line-height:0; clear:both; visibility:hidden;}
+#nav ul li{display:block;height:60px; float:left; margin-right:28px;}
+#nav ul li a{display:block; line-height:60px;}
+
+/**banner**/
+#banner{width:1000px; margin:0 auto 40px auto;}
+#banner p{}
+#banner p a{display:block; text-align:center;}
+#banner p a img{width:930px; height:394px; padding:5px; border:1px solid #ccc; background:#FFFFFF;}
+#banner p a img{-moz-box-shadow:0 1px 5px #ccc;
+-webkit-box-shadow:0 1px 5px #ccc;
+box-shadow: 0 1px 5px #999;}
+
+
+/**warp**/
+#warp{width:1000px; margin:0 auto;}
+
+
+
+
+/*** 页脚 ***/
+
+#foot{width:990px;padding:10px 0 20px 10px;margin:0 auto; background:#000;}
+#foot{overflow:hidden;zoom:1;}
+#foot:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+#foot{-moz-box-shadow:0px 0px 2px #000;-webkit-box-shadow:0px 0px 2px #000;box-shadow: 0px 0px 2px #000;}
+
+
+
+
+
+
+
+
+
+
+
+/**** Jenny 首页 index.html ****/
+
+
+
+
+
+
+
+
+
+
+/**** Jenny 博客类页 jblogcat.html ****/
+
+
+
+
+/**** Jenny 博客详情页 jblog.html ****/
+
+
+
+
+
+
+/**** Jenny 产品类页 jgoodcat.html ****/
+
+
+
+
+/**** Jenny 产品详情页 jgood.html ****/
+
+
+
+
+
+/**** Jenny 案例类页 jgoodcat.html ****/
+
+
+
+
+/**** Jenny 案例详情页 jgood.html ****/
+
+
+
+
+
+/**** 单页 jpage.html ****/
+
+
+
+
+
+/**** 特殊单页(留言) jpage-liuyan.html ****/
+
+
+
+
+
+
+
+
+
+
+
+
+/*css by Jenny 20111207-1219 Guangzhou */

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<meta name="renderer" content="webkit|ie-stand"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=edge,chrome=1"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, email=no"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="x5-page-mode" content="app"/>
+<meta name="browsermode" content="application"/>
+<meta name="wap-font-scale" content="no"/>
+<link href="skin/a_base.css" rel="stylesheet"/>
+<title>模板文件基础</title>
+</head>
+<body id="jBase">
+
+二维数组 内部元素 同索引值 累加，并形成新数组
+
+<script>
+
+
+  
+
+
+//把1个二维数组的同索引的值 累加,并形成新数组,比如：
+var arrs=[[12224200, 14624200, 14204200, 14214200, 14222200, 14223200, 14224200],[3920, 3232, 3201, 4334, 4390, 4330, 4200]];
+
+var zs=a0SumArrs(arrs);
+
+//把多个二维数组 同索引的值 累加,并形成新数组
+function a0SumArrs(arrs){
+	var zslen=arrs[0].length;
+	console.log('zslen=',zslen);//新数组的长度
+	
+	var zs=[];//定义新数组并赋0值
+	for(var i=0;i<zslen;i++){zs.push(0);}
+	
+	var arrslen=arrs.length;
+	console.log('arrslen=',arrslen);//二维数组的长度
+	
+	for(var m=0;m<arrslen;m++){
+		var arr=arrs[m];
+		for(var j=0;j<arr.length;j++){
+			zs[j] += parseFloat(arr[j]);
+		}
+	}
+	
+	console.log('zs=',zs);//新数组最终值
+	
+return zs;
+}/*0.5*/
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

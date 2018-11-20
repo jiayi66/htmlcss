@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="renderer" content="webkit|ie-stand"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=edge,chrome=1"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, email=no"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="x5-page-mode" content="app"/>
+<meta name="browsermode" content="application"/>
+<meta name="wap-font-scale" content="no"/>
+<link href="skin/0-door.css" rel="stylesheet"/>
+<title>HTML CSS 殿堂入门 代码片段库</title>
+</head>
+<body id="jDoor">
+
+<!--html>(head>(meta+link+style+title)+body>(someHTML+script))-->
+
+
+++++++++++++++++ 一、标签tag 金字塔 ++++++++++++++++
+
+块盒div
+标题h1~h6
+
+无序列表ul li
+段落 p
+定义对象 dl dt dd
+
+微元素
+span em
+b i
+a img
+br
+
+表格 table tr th td
+表单 form label input select textarea file
+
+
+
+
+================== 大元素 div h1~h6
+<div>div标签 用来做布局、分栏、段落模块内衣</div>
+<h1>h1用来做 站点眼睛</h1>
+<h2>h2用来做 文章模块头 或 极为重要模块头，或部分主导航。</h2>
+<h3>h3常用来做 普通模块头</h3>
+<h4>h4用来做 下级模块头。 h5 h6 一般不使用。</h4>
+
+dc=
+<div class="a0mod">
+
+<!-- a0mod --></div>
+di=
+<div class="a0mod" id="">
+
+<!-- a0mod --></div>
+(h1=)
+<h1 class="siteh"></h1>
+h2=
+<h2 class="a0posth"></h2>
+
+h3=
+<h3 class="a0mh"></h3>
+h4=
+<h4 class="a0nh"></h4>
+
+
+
+
+
+==================中元素 ul ol li p dl dt dd
+
+<ul>
+<li>无序列表ul 列表项 li</li>
+</ul>
+<ol>
+<li>有序列表ol 列表项 li，用得少</li>
+</ol>
+<p>p标签 浏览器默认字体大小为16px，即等于medium。
+其它默认值参考：http://www.th7.cn/web/html-css/201307/11743.shtml
+</p>
+<dl>
+<dt>dl定义 标题dt</dt>
+<dd>dl定义 描述dd</dd>
+</dl>
+
+(ul=)
+<ul class="a0cot">
+	<li class="a0itm">
+	</li>
+</ul>
+ol=
+<ol class="a0cot">
+	<li class="a0itm">
+	</li>
+</ol>
+li=
+<li class="a0itm"></li>
+
+p=
+<p></p>
+
+dl=
+<dl class="a0dl cf">
+<dt class="a0dt"></dt>
+<dd class="a0dd"></dd>
+</dl>
+dt=
+<dt class="a0dt"></dt>
+dd=
+<dd class="a0dd"></dd>
+
+
+
+===================微元素 a img span em b i br
+<a href="jgood.html" title="链接提示">链接锚文本</a>
+<img src="pic/a160120.jpg"  alt="图片描述"/>
+<span>无极 span</span>
+
+<em>斜体 em</em>
+<b>短加粗 b </b>
+<i>短斜体 i</i>
+<br/>
+
+
+a=
+<a class="a0mor" href="jblogcat.html"></a>
+im=
+<img class="a0cov" src="pic/a12090.jpg"/>
+sp=
+<span class="a0mta"></span>
+
+em=
+<em class="a0key"></em>
+b=
+<b class="a0tit"></b>
+i=
+<i class="a0cob"></i>
+
+brr=
+<br/>
+
+
+
+=================== 公用图标icon
+icz=
+<i class="icz iz3 iplay jsplay"></i>
+aicz=
+<a class="icz iz3 iplay" href="icz.html"></a>
+
+icy=
+<i class="icz iz3 iplay jsplay"></i>
+aicy=
+<a class="icz iz3 iplay" href="icz.html"></a>
+
+ics=<i class="ics is3 iplay jsplay">|</i>
+aics=<a class="ics is3 iplay" href="jvideo.html">|</a>
+
+
+
+
+
+===================表格 table tr th td, trs tds
+<table class="tb1">
+<tr>
+<th scope="col">字段名</th>
+<th scope="col">客户名称</th>
+<th scope="col">告警类型</th>
+<th scope="col">告警次数</th>
+</tr>
+<tr>
+<td><span class="inb w8 elis">广州市供电局有限公司</span></td>
+<td><span class="inb w8 elis">广州市供电局有限公司</span></td>
+<td>实时</td>
+<td class="tac">44</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</table>
+
+tb=
+<table class="a0tb">
+<tr>
+<th scope="col"></th>
+<th scope="col"></th>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+tr=
+<tr></tr>
+th=
+<th></th>
+td=
+<td></td>
+
+
+
+
+
+===================表单 form label input select textarea file 
+
+form=
+<form class="a0form" method="get" action="jsearch.html">
+</form>
+
+
+(fqc=) 必选为1
+<label class="qcz" for="">
+<i class="need">*</i>
+<i class="inb">作品类型</i>
+</label>
+(fqc0=) 可选为0
+<label class="qcz" for="">备注</label>
+
+
+fipt=
+<input type="text" class="ipt ipt3 ipta" id="" name="fipt" value="" placeholder="关键字..." maxlength="22" required/>
+ipti= 假ipt
+<i class="bzb ipt ipt3 ipta per100" contenteditable></i>
+
+fipt other
+<input type="search" class="ipt ipt3 ipta" id="" name="" value=""/>
+<input type="password" class="ipt ipt3 ipta" id="" name="" value=""/>
+<input type="number" class="ipt ipt3 ipta" id="" name="" value=""/>
+
+
+fbtn=
+<input type="button" class="btn btn3 btnpt" id="" name="fbtn" value="提交"/>
+fbtn other
+<input type="submit" class="btn btn3 btnbz" id="" name="" value="发送"/>
+<input type="reset" class="btn btn3 btnyx" id="" name="" value="重置"/>
+
+btn=
+<b class="btn btn3 btnpt jshare">分享</b>
+abtn
+<a class="btn btn3 btnpt" href="jblog.html">详情</a>
+lbtn
+<label class="btn btn3 btnbz per50" id="">提交</label>
+
+
+
+=== 三段式按钮 2个标签做 左右装饰较窄，btd做按钮
+ibtd=
+<i class="inb btd btd3 btdbz"><b class="btdt">投票</b></i>
+<b class="inb btd btd3 btdbz" id=""><i class="btdt">提交</i></b>
+abtd=
+<a class="inb btd btd3 btdbz per50" id=""><i class="btdt">提交</i></a>
+lbtd=
+<label class="btd btd3 btdbz per50" id=""><i class="btdt">提交</i></label>
+
+
+== 以下少用
+btd=
+<h3 class="btd btd3 btdbz">
+<b class="btdt">三段式两标签按钮</b>
+</h3>
+btdi=
+<h3 class="btd btd3 btdbz">
+<b class="btdt"><i class="icz iz2 ivideo3">三段式两标签按钮带图标</i></b>
+</h3>
+
+
+
+
+fslt=
+<select class="slt slt3 slta" name="roles" id="">
+<option value="0">全部</option>
+<option value="1">超级管理员</option>
+<option value="2">管理员</option>
+<option value="3">客服</option>
+<option value="4">其它</option>
+</select>
+
+
+
+ftea=
+<textarea class="ftea per100" id="" name="a0nte" placeholder="说些什么" required></textarea>
+
+
+filebox
+<p class="filebox cf tky5">
+<b class="btn btnpt qcy">预览</b>
+<span class="ywy"><input type="text" id="path1" class="ipt ipta per100"></span>
+<input type="file" class="file" name="aaaaaa" onchange="path1.value=this.value;" required/>
+<i title="上传中,请稍候..." class="icw iw3 fwait hide" id=""></i>
+</p>
+
+
+
+<!-- sobox elements -->
+soipt
+<span class="blk wyy"><input type="text" placeholder="搜索..." value="" name="soipt" class="ipt ipt1 soipt per100"></span>
+
+soicz
+<label class="icz iz1 soicz qcy" id=""><input type="submit" name="soicz" value="yes"></label>
+
+sobtn
+<label class="btn btn1 sobtn qcy" id="">提交<input type="button" name="sobtn" value="1"/></label>
+
+
+soboxi 简易搜索sobox 图标icz
+<p class="sobox2 tky2">
+<span class="blk wyy"><input type="text" placeholder="搜索..." value="" name="soipt" class="ipt ipt1 soipt per100"></span>
+<label class="icz iz1 soicz qcy" id=""><input type="submit" name="soicz" value="yes"></label>
+<input type="hidden" value="abcde" name="s"/>
+</p>
+
+soboxb 简易搜索sobox 按钮btn
+<p class="sobox1 tky2">
+<span class="blk wyy"><input type="text" placeholder="搜索..." value="" name="soipt" class="ipt ipt1 soipt per100"></span>
+<label class="btn btn1 sobtn qcy" id="">提交<input type="button" name="sobtn" value="1"/></label>
+<input type="hidden" value="abcde" name="s"/>
+</p>
+
+
+
+
+
+
+
+===================其它 html 标签
+
+<strong>加粗 strong </strong>
+<small>附注 small</small>
+
+<sub>subscript</sub>
+<sup>superscript</sup>
+
+<q>这是短的引用</q>
+<blockquote>
+这是长的引用。使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+</blockquote>
+
+<pre>已编排格式 预格式文本 它保留了 空格
+和换行。适合显示计算机代码</pre>
+<code>Computer code</code>
+
+<address>
+Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+
+<kbd>Keyboard input</kbd><br />
+<tt>Teletype text</tt><br />
+<samp>Sample text</samp><br />
+<var>Computer variable</var><br />
+
+<abbr title="People's Republic of China">PRC 缩写</abbr>
+<acronym title="World Wide Web">WWW 首字母缩略语</acronym>
+
+<del>删除线del 与ins 联合使用</del>
+<ins>插入 ins</ins>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++ 二、模块model 结构分析 ++++++++++++++++
+
+
+
+
+
+
+=================== 模块外衣
+(dc=)
+<div class="a0mod">
+
+<!--a0mod--></div>
+
+
+
+
+
+
+=================== 模块头
+
+(h2=)
+<h2 class="posth">网络红人争霸赛大幕开启，放飞你的音乐梦</h2>
+(h3=)
+<h3 class="a0mh cf">模块头</h3>
+(h4=)
+<h4 class="a0nh cf">模块项的头</h4>
+
+
+
+
+
+mh0= 最简模块头
+<h3 class="a0mh cf">
+<b class="a0tit"></b>
+</h3>
+mh= 常见模块头
+<h3 class="a0mh cf">
+<b class="a0tit"></b>
+<a class="a0mor" href="jblogcat.html"></a>
+</h3>
+mha= 长模块头
+<h3 class="a0mh cf">
+<a class="a0tit" href="jblogcat.html">模块标题</a>
+<a class="a0mor" href="jblogcat.html">更多 &gt;&gt;</a>
+</h3>
+
+
+
+
+
+== 模块标题
+tit= 父模块标题
+<b class="a0tit"></b>
+atit= 链接式模块标题
+<a class="a0tit" href="jblogcat.html">模块标题</a>
+alts= 子模块标题组
+<b class="a0alt">1月</b>
+<b class="a0alt now">2月</b>
+<b class="a0alt">3月</b>
+
+
+
+
+== 模块标题 各种组合方式
+mh0+alts 父子一处
+<h3 class="a0mh cf">
+<b class="a0tit">按月份</b>
+<b class="a0alt">1月</b>
+<b class="a0alt now">2月</b>
+<b class="a0alt">3月</b>
+</h3>
+mh+h4>alts 父子分开
+<h3 class="a0mh cf">
+<b class="a0tit">btit</b>
+<a class="a0mor" href="jblogcat.html">a0mor</a>
+</h3>
+<h4 class="a0nh cf">
+<b class="a0alt">1月</b>
+<b class="a0alt now">2月</b>
+<b class="a0alt">3月</b>
+</h4>
+bar+h3+alts3 父子分开并升级
+<h2 class="a0bar cf">
+<a class="g now" href="xunyan.html">巡演排行榜</a>
+<a class="g" href="gongyi.html">公益众筹榜</a>
+</h2>
+<h3 class="a0mh cf">
+<b class="a0alt">1月</b>
+<b class="a0alt now">2月</b>
+<b class="a0alt">3月</b>
+</h3>
+
+
+
+
+<!-- 特殊 mor -->
+mor= 小mor
+<a class="a0mor" href="jblogcat.html">查看更多</a>
+
+dsc=
+<i class="a0dsc">模块头描述</i>
+sup=
+<i class="a0sup">模块头悬挂</i>
+
+
+
+more= 大more
+<p class="more tac bt"></p>
+
+moree== more+aicy 
+<p class="more tac bt"><a class="icy iy1 ieast" href="jblogcat.html">欣赏更多作品</a></p>
+mores= more+icy
+<p class="more tac bt"><i class="icy iy1 isouth jspag">更多评论</i></p>
+
+morea= more+abtn
+<p class="more tac"><a class="btn btn3 btnpt per70" href="jblogcat.html">欣赏更多作品</a></p>
+moreb= more+btn
+<p class="more tac"><b class="btn btn3 btnpt per70 jspag">下一页</b></p>
+
+
+
+=== 三段式按钮 3个标签做 左右装饰较宽，btt做模块标题
+
+btt= 
+<h3 class="btt v3mh"><i class="bttc"></i>
+<b class="bttt">三段式</b>
+</h3>
+
+btti= btt+icz
+<h3 class="btt v3mh"><i class="bttc"></i>
+<b class="bttt"><i class="icz iz2 ivideo3">三段式带图标</i></b>
+</h3>
+
+
+== 以下少用
+ibtt=
+<i class="btt btt3 bttpt"><i class="bttc"></i>
+<b class="bttt">三段式</b>
+</i>
+abtt=
+<a class="inb btt btt3 bttpt per50" id=""><i class="bttc"></i>
+<i class="bttt">提交</i>
+</a>
+lbtt=
+<label class="btt btt3 bttpt per50" id=""><i class="bttc"></i>
+<i class="bttt">提交</i>
+</label>
+
+
+
+=================== 模块内衣与模块项
+
+
+<!-- 标准列表模块结构 -->
+mul=
+<div class="a0mod">
+<h3 class="a0mh cf">
+<b class="a0tit">a0tit</b>
+<a class="a0mor" href="jblogcat.html">bmor</a>
+</h3>
+<ul class="a0cot">
+<li class="a0itm">
+
+</li>
+</ul>
+<!--a0mod--></div>
+
+ul=
+<ul class="a0cot cf">
+<li class="a0itm">
+
+</li>
+</ul>
+
+
+
+<!-- 标准段落模块结构 -->
+mp=
+<div class="a0mod">
+<h3 class="a0mh cf">
+<b class="a0tit">atit</b>
+<a class="a0mor" href="jblogcat.html">amor</a>
+</h3>
+<div class="a0cot">
+<p class="jitm"></p>
+<!--acot--></div>
+<!--a0mod--></div>
+
+<!-- 普通段落内衣 -->
+pcot=
+<p class="a0cot cf">
+<a class="a0itm" href="jblog.html"></a>
+</p>
+
+pa=
+<p class="a0itm cf">
+<a class="a0lnk" href="jblog.html">苹果</a>
+</p>
+
+ppic=
+<p class="a0pics cf">
+<i class="a0pic" style="background-image:url(pic/a0pic.jpg);" href="jphoto.html"></i>
+</p>
+
+ptel=
+<p class="toptels">
+<b class="toptel">139-2215-8003</b>
+<b class="toptel">020-3487-1131</b>
+</p>
+
+
+<!-- 正文内衣 -->
+post=
+<div class="a0post">
+<p></p>
+<!--a0post--></div>
+
+<!-- 正文模块 -->
+entry=
+<div class="a0entry">
+<h2 class="a0posth">赛事章程</h2>
+
+<div class="a0post">
+
+<h3>一、赛事须知</h3>
+
+<h4>1. 总赛制：</h4>
+<p>“星动校园，Wo最有Fun”做为国内一档贴合学生及粉丝团体的校园青春粉丝秀，赛制将由“3+3+3+1+1”：三期线上主题赛、三场线下校园星动赛、三场艺人后援会公益活动、一场全国总决赛及一场大型公益活动的形式组成，并通过公平、公正、公开的网络投票，角逐最星动的声音及最有Fun的艺人后援会团体。</p>
+
+<h4>2. 主题赛赛制：</h4>
+<p>1) 主题赛共分为三期进行，参赛选手可上传自己的“音频、视频、图文”作品参与一期或多期主题赛的角逐；</p>
+<p><img src="pic/ct.jpg"/></p>
+<p>2) 每期主题赛均以不同的参赛内容分成三个专区，分别为【炫音榜】、【视频榜】、【粉丝秀场】参赛选手可任选一个或多个专区参赛；</p>
+<p>3) 主题赛以“2+1”模式将三个专区划分为主竞赛专区及娱乐竞赛专区，参赛选手必须参与主竞赛专区方有资格参与线下星动赛及总决赛的角逐；</p>
+
+<!--a0entry --></div>
+
+
+
+
+
+
+
+<!-- 标准定义模块结构 -->
+mdl=
+<div class="a0mod">
+<h3 class="a0mh cf">
+<b class="a0tit">ctit</b>
+<a class="a0mor" href="jblogcat.html">a0mor</a>
+</h3>
+<dl class="a0dl cf">
+<dt class="a0dt"></dt>
+<dd class="a0dd"></dd>
+</dl>
+<!--a0mod--></div>
+
+dl=
+<dl class="a0dl cf">
+<dt class="a0dt"></dt>
+<dd class="a0dd"></dd>
+</dl>
+
+
+
+
+
+++++++++++++++++ 三、模块项 内部件(parts) 举例 ++++++++++++++++
+
+
+
+
+=================== 图标icon
+(icz=)
+<i class="icz iz3 iplay jsplay"></i>
+(aicz=)
+<a class="icz iz3 iplay" href="icz.html"></a>
+
+(icy=)
+<i class="icz iz3 iplay jsplay"></i>
+(aicy=)
+<a class="icz iz3 iplay" href="icz.html"></a>
+
+(ics=)
+<i class="ics is3 iplay jsplay">|</i>
+(aics=)
+<a class="ics is3 iplay" href="jvideo.html">|</a>
+
+
+ 
+==========标记图 lbl lbt ord, icw
+
+lbl= 普通标记
+<i class="lbl lbla lblpa">最新</i>
+<i class="lbl lblb lblpa">热门</i>
+
+lbt= 左中右三段式标记 同 异 位
+<i class="lbt lbta lbtpa">人气晋级</i>
+<i class="lbt lbtb lbtpa">实力晋级</i>
+
+ord= 普通排序标记 同 异 位
+<i class="ord ord1 ordpa">01</i>
+<i class="ord ord3 ordpa">03</i>
+
+orc= 特殊排序标记 同 异 位
+<i class="orc orc1 orcpa">01</i>
+<i class="orc orc3 orcpa">03</i>
+
+
+icw=操作标记
+<i class="icw iw3 ishare jshare ed">分享</i>
+<b class="icw iw3 ivote jsvote ed">投票</b>
+<a class="icw iw3 bgzd r50">请进</a>
+
+iaud= 音频播放标记
+<i class="icw iw3 iplay jsaud ing" audid="01" audurl="media/water.mp3" audavg="skin/face1.jpg" audbti="点评2" audnme="点评人">点评</i>
+
+
+
+
+==========蒙板图
+msk=
+<i class="a0msk msk"></i>
+
+
+
+
+==========内容图 pic/
+(im)=
+<img class="a0cov" src="pic/a12090.jpg"/>
+avg=
+<img class="a0avg" src="pic/avg7.jpg"/>
+
+cob=
+<i class="a0cob" style="background-image:url(pic/a0cob.jpg);"></i>
+avb=
+<i class="a0avb" style="background-image:url(pic/a0avb.jpg);"></i>
+
+acob=
+<a class="a0cob" style="background-image:url(pic/a0cob.jpg);" href="yiren.html"></a>
+aavb=
+<a class="a0avb" style="background-image:url(pic/a0avb.jpg);" href="yiren.html"></a>
+
+pcob=
+<p class="a0cob" style="background-image:url(pic/a0cob.jpg);"></p>
+pavb=
+<p class="a0avb" style="background-image:url(pic/a0avb.jpg);"></p>
+
+
+
+
+
+==========文字 elis
+
+bti=
+<b class="a0bti elis">公司人力资源部</b>
+nme=
+<b class="a0nme elis">王羲之</b>
+
+
+abti=
+<a class="a0bti elis" href="jblog.html">文章报集团公司人力资源部审批</a>
+anme=
+<a class="a0nme elis" href="user.html">李立三</a>
+
+
+btiz= 带图标的标题
+<b class="a0bti elis icz iz3 iplay">王金金摇滚嗨全场</b>
+nmez= 带图标的人名
+<b class="a0nme elis icz iz3 iplay">王献之</b>
+
+abtiz= 带图标的链接标题
+<a class="a0bti elis icz iz3 iplay" href="jblog.html">王金金摇滚嗨全场</a>
+anmez= 带图标的链接人名
+<a class="a0nme elis icz iz3 iplay" href="user.html">王献之</a>
+
+
+
+hbti=
+<h4 class="a0bti elis">一人有一个梦想</h4>
+hnme=
+<h4 class="a0nme elis">王献之</h4>
+
+lnk=
+<a class="a0lnk" href="jvideo.html"></a>
+uri=
+<a class="a0uri" href="user.html"></a>
+
+
+== 图文结合
+aib=
+<a class="g a0lnk" href="video.html">
+<i class="a0cob rt" style="background-image:url(pic/a0cob.jpg);"></i>
+<b class="a0bti elis">一人有一个梦想</b>
+</a>
+
+ain=
+<a class="g a0uri" href="user.html">
+<i class="a0avb rt" style="background-image:url(pic/a0avb.jpg);"></i>
+<b class="a0nme elis">王羲之</b>
+</a>
+
+
+<!--  bti在外 链接在内-->
+habti=
+<h4 class="a0bti"><a class="a0lnk elis" href="jmusic.html">兰亭序的故事</a></h4>
+hanme=
+<h4 class="a0nme"><a class="a0uri elis" href="user.html">王羲之</a></h4>
+
+
+
+<!-- 手机端用 扩大链接范围   bti在里 链接在外-->
+abbti = lnk+bti+ren
+<a class="a0lnk" href="jblog.html">
+<b class="a0bti elis">公司人力资源部</b>
+<b class="a0ren">
+<i class="a0r1">2142254</i><i class="a0r2">人</i>
+</b>
+</a>
+abnme= uri+nme+pia
+<a class="a0uri" href="user.html">
+<b class="a0nme elis">王羲之</b>
+<b class="a0pia">
+<i class="a0p1">2142254</i><i class="a0p2">票</i>
+</b>
+</a>
+
+sbnme=mtas+nme+pia
+<span class="a0mtas">
+<b class="a0nme elis">王羲之</b>
+<b class="a0pia">
+<i class="a0p1">2142254</i><i class="a0p2">票</i>
+</b>
+</span>
+
+
+
+
+dtl=
+<a class="a0dtl" href="jblog.html">详情</a>
+
+
+
+
+==========属性组
+
+
+pmtas=
+<p class="a0mtas cf">
+<span class="a0mta">
+<em class="a0key"></em>
+<b class="a0val"></b>
+</span>
+</p>
+
+ulmtas=
+<ul class="a0mtas cf">
+<li class="a0mta">
+<em class="a0key"></em>
+<p class="a0val"></p>
+</li>
+
+</ul>
+
+mtas
+<span class="a0mtas">
+<b class="a0mta">
+<em class="a0key"></em>
+<i class="a0val"></i>
+</b>
+</span>
+
+mta=
+<span class="a0mta">
+<em class="a0key"></em>
+<b class="a0val"></b>
+</span>
+
+<!-- 特殊无key-->
+dte=
+<i class="a0dte">2015-12-23</i>
+mmdd=
+<em class="mmdd">
+<i class="mm">Mar</spian>
+<i class="dd">19</i>
+</em>
+
+cat=
+<a class="a0cat" href="jblogcat.html">类别</a>
+
+
+jia= 价位
+<b class="a0jia">
+<i class="a0j0">&yen;</i>
+<i class="a0j1">20.00</i>
+<i class="a0j2">元</i>
+</b>
+
+pia= 票数
+<b class="a0pia">
+<i class="a0p1">2142254</i><i class="a0p2">票</i>
+</b>
+
+ren= 人数
+<b class="a0ren">
+<i class="a0r1">2142254</i><i class="a0r2">人</i>
+</b>
+
+nia= 年龄
+<b class="a0nia">
+<i class="a0n1">96</i><i class="a0n2">岁</i>
+</b>
+
+
+==========项描述
+nte=
+<p class="a0nte">系统提出并阐述了互联网装修模式，家装O2O研究最深入的自媒体人，《家居电商周刊》主编（公众号jiajuds1），10年营销策划、公关传播、网络营销经验，著有《中国式营销的江湖规则》(中国时代经济出版社)。</p>
+
+nte0=
+<p class="a0nte">系统提出并阐述了互联网装修模式</p>
+<p class="smios">活动由饭盟提供，<br>与设备生产商Apple Inc.公司无关</p>
+
+
+
+
+
+<p class="tac gztip">本活动最终解释权归中国联通沃音乐所有。</p>
+
+==========项操作
+acs=
+<p class="a0acs"></p>
+
+(icz=)
+<i class="icz iz3 iplay jsplay"></i>
+
+(btn=)
+<b class="btn btn3 btnpt jshare">分享</b>
+
+(abtn=)
+<a class="btn btn3 btnpt" href="jblog.html">详情</a>
+
+(aicz=)
+<a class="icz iz3 iplay" href="jvideo.html"></a>
+
+(icw=)
+<i class="icw iw3 ishare jshare ed">分享</i>
+(iaud=)
+<i class="icw iw3 iplay jsaud ing" audid="01" audurl="media/water.mp3" audavg="skin/face1.jpg" audbti="点评2" audnme="点评人">点评</i>
+
+
+iacs= acs+icz
+<p class="a0acs">
+<i class="icz iz3 iplay jsplay"></i>
+<i class="icz iz3 iplay jsplay"></i>
+<i class="icw iw3 ishare jshare ed">分享</i>
+</p>
+bacs= acs+btn
+<p class="a0acs">
+<b class="btn btn3 btnpt jshare">分享</b>
+<b class="btn btn3 btnpt jshare">分享</b>
+</p>
+aacs= acs+abtn
+<p class="a0acs">
+<a class="btn btn3 btnpt" href="join.html">我要参加</a>
+<a class="icw iw3 ishare" href="video.html">进入</i>
+<a class="icz iz3 iplay" href="jvideo.html">进入</a>
+</p>
+
+
+==========其它部件
+ban=
+<a class="a0ban" href="#jban.html"></a>
+logo=
+<a class="logowo" href="index.html"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=================== 四、页面布局分析 =============================
+
+
+==========分栏 
+
+==平均分栏col
+略
+
+==有界无边分栏wel
+略
+
+
+==有界有边分栏gap
+gap=
+<p class="gs gs3 rt43 cf">
+<a class="g a0uri" href="user.html">rti nme</a>
+</p>
+gapul=
+<ul class="gs gs3 rt43 cf">
+<li class="g"><a class="a0uri" href="user.html">
+rti nme
+</a>
+</li>
+</ul>
+
+
+rti=
+<i class="a0avb rt" style="background-image:url(pic/a0avb.jpg);"></i>
+rtem= 图片内还有子元素
+<em class="a0avb rt" style="background-image:url(pic/a0avb.jpg);"><i class="icz iz3 iplay jsplay"></i><i class="ord ord1 ordpa">01</i>
+</em>
+rta=
+<a class="a0avb rt" style="background-image:url(pic/a0avb.jpg);" href="user.html"></a>
+rtin=
+<a class="rt" href="user.html"><img class="rtin a0avg" src="pic/a12090.jpg"/></a>
+
+
+bar= 不定分栏导航
+<h2 class="a0bar cf">
+<a class="g now" href="xunyan.html">巡演排行榜</a>
+<a class="g" href="gongyi.html">公益众筹榜</a>
+</h2>
+
+bar1= 平均分栏导航
+<h2 class="a0bar ps ps4 cf">
+<a class="g" href="huigu.html">精彩视频</a>
+<a class="g now" href="zongbang.html">总榜</a>
+<a class="g" href="dianping.html">评委点评</a>
+<a class="g" href="baoming.html">我要报名</a>
+</h2>
+
+bar2= 图标式平均分栏导航
+<h2 class="a0bar ps ps4 cf">
+<a class="g ics is6 h1a" href="huigu.html">精彩视频</a>
+<a class="g ics is6 h1b now" href="zongbang.html">总榜</a>
+<a class="g ics is6 h1c" href="dianping.html">评委点评</a>
+<a class="g ics is6 h1d" href="baoming.html">我要报名</a>
+</h2>
+
+
+
+
+
+
+
+======不定分栏，中小布局 探索: 
+屋檐、汽车与天空。
+
+
+
+---屋檐有3种：
+wysp= span屋檐
+<span class="wyz"></span>
+<span class="wyy"></span>
+<span class="wyz wyy"></span>
+
+wyp= p屋檐
+<p class="wyz"></p>
+<p class="wyy"></p>
+<p class="wyz wyy"></p>
+
+wydc= div屋檐
+<div class="wyz">
+<!-- wydc --></div>
+<div class="wyy">
+<!-- wydc --></div>
+<div class="wyz wyy">
+<!-- wydc --></div>
+
+
+
+---汽车有2种：i/label
+qci= 汽车i 
+<i class="qcz"></i>
+<i class="qcy"></i>
+
+
+form内 汽车label
+
+fqc= 必选为1
+<label class="qcz" for="">
+<i class="need">*</i>
+<i class="inb">作品类型</i>
+</label>
+fqc0= 可选为0
+<label class="qcz" for="">备注</label>
+
+<!-- 至于其它 p汽车 a汽车 dt汽车，不做公用故略过。 -->
+
+
+
+
+
+---天空 有3种：
+p天空、div天空、和 ul天空
+
+
+
+p天空,内一般是span屋檐在左
+
+tkp= 
+<p class="tkz3">
+<span class="wyz"></span>
+<i class="qcz"></i>
+</p>
+
+<!-- 天空右 -->
+<p class="tky2">
+<span class="wyy"></span>
+<i class="qcy"></i>
+</p>
+
+<!-- 天空左右 -->
+<p class="tkz3 tky2">
+<span class="wyz wyy"></span>
+<i class="qcz"></i>
+<i class="qcy"></i>
+</p>
+
+
+
+
+div天空，内一般是p屋檐
+tkdc=
+<div class="tkz3 tky2">
+<p class="wyz wyy"></p>
+<i class="qcz"></i>
+<i class="qcy"></i>
+<!-- tkdc --></div>
+
+
+
+ul天空，内一般是p屋檐
+tkul=
+<ul class="tkz3 tky2">
+<li>
+<p class="wyz"></p>
+<i class="qcz"></i>
+</li>
+
+<li>
+wysp
+<i class="qcy"></i>
+</li>
+
+<li>
+wydc
+<i class="qcz"></i>
+<i class="qcy"></i>
+</li>
+</ul>
+
+
+
+
+form天空，内一般是p屋檐或div屋檐
+
+fb=
+<form class="fb fb3 tkz3" method="get" action="join.html">
+<ul class="fbul fz3">
+
+<li>
+fqc
+wyp
+</li>
+
+<li>
+fqc0
+wydc
+</li>
+
+</ul>
+
+fbtj
+</form>
+
+
+fbtj= 提交居中
+<p class="fbtj fz3 tac cf">
+<label class="btn btnbz per50" id="">提交</label>
+</p>
+fbtj0= 提交在左
+<p class="fbtj fz3 wyz cf">
+<label class="btn btnbz per50" id="">提交</label>
+</p>
+
+
+
+
+
+
+
+
+
+==========页眉
+
+top=
+<div class="topout">
+<div class="top con cf">
+
+<!--top--></div>
+<!--topout--></div>
+
+
+topcut=
+<div class="topcut">
+<!--topcut--></div>
+
+
+
+
+
+
+soboxb=
+<p class="sobox1 tky2">
+<span class="wyy"><input type="text" placeholder="搜索..." value="" name="soipt" class="ipt ipt1 soipt per100"></span>
+<label class="btn btn1 sobtn qcy" id="">提交<input type="button" name="sobtn" value="1"/></label>
+<input type="hidden" value="abcde" name="s"/>
+</p>
+
+
+
+soboxi=
+<p class="sobox2 tky2">
+<span class="wyy"><input type="text" placeholder="搜索..." value="" name="soipt" class="ipt ipt1 soipt per100"></span>
+<label class="icz iz1 soicz qcy" id=""><input type="submit" name="soicz" value="yes"></label><input type="hidden" value="abcde" name="s"/>
+</p>
+
+
+
+
+
+
+
+
+logbox=
+<p class="logbox">
+<em class="l2wel">欢迎来到好支付！</em>
+<a class="l2reg" href="jreg.html">注册</a>
+<a class="l2log" href="jlog.html">登录</a>
+
+<a class="l2avb" href="jmy.html" style="background-image:url(pic/face.jpg);"></a>
+<a class="l2nme" href="jmy.html">用户名</a>
+<a class="l2log" href="jlog.html">退出</a>
+
+</p>
+
+
+
+==========页头
+
+head=
+<div class="headout">
+<div class="head con cf">
+
+<!--head--></div>
+<!--headout--></div>
+
+mhead=
+<div class="head cf">
+<a class="goback" href="index.html">返回首页</a>
+<form action="search.html" method="get" class="topcut fr" id="sososo">
+<a class="inb toplog hide" href="jreg.html">登录</a>
+<a class="inb topavg hid e" style=" background-image:url(skin/avg2.jpg)" href="user-my.html"></a>
+<i class="inb topgap">|</i>
+<a href="saizhi.html" class="inb toplog">赛制</a>
+<p class="inb topso">
+<span class="sokeyout">
+<input type="text" placeholder="校园粉丝秀..." value="" name="sokey" class="ipt ipt1 sokey"></span><label title="点击提交" class="icz iz1 sosbt"><input type="submit" name="sosbt" value="yes"></label>
+<input type="hidden" value="2" name="typeid" id="typeid">
+<input type="hidden" value="abcde" name="s" id="s">
+</p>
+</form>
+<!-- head --></div>
+
+hd=
+<div class="p6 cf">
+<a class="fl lh2"> &lt; 返回</a>
+<b class="fr btn btn2 btnbz w4">上海</b>
+<h3 class="tac"><b class="inb w10 elis lh2">星动校园</b></h3>
+<!-- p6 --></div>
+
+
+
+(h1=)
+<h1 class="siteh"><a class="logowo" href="index.html"></a></h1>
+
+nav= 主导航一级
+<ul class="nav cf">
+<li><a href="index.html">首页</a></li>
+<li class="now"><a href="jnewscat.html">资讯</a></li>
+<li><a href="jgoodcat.html">产品</a></li>
+<li><a href="jcasecat.html">案例</a></li>
+<li><a href="jpage.html">关于</a></li>
+</ul>
+
+navp= 主导航二级
+<p class="navp">
+<a href="jblogcat.html">公司新闻</a>
+<a href="jblogcat.html" class="now">行业资讯</a>
+<a href="jblogcat.html">参考资料</a>
+</p>
+
+
+
+
+(nav2=) 双层主导航
+nav+navp
+<ul class="nav cf">
+<li><a href="index.html">首页</a></li>
+<li class="now"><a href="jnewscat.html">资讯</a>
+<p class="navp">
+<a href="jblogcat.html">公司新闻</a>
+<a href="jblogcat.html" class="now">行业资讯</a>
+<a href="jblogcat.html">参考资料</a>
+</p>
+</li>
+<li><a href="jgoodcat.html">产品</a></li>
+<li><a href="jcasecat.html">案例</a></li>
+<li><a href="jpage.html">关于</a></li>
+</ul>
+
+
+
+
+
+menu= 手风琴菜单 结构与nav2一样 nav+navp
+<ul class="n2menu">
+<li class="n2mn"><a class="n2ta" href="tieba.html">秀场</a></li>
+<li class="n2mn now">
+<a class="n2ta">作品</a>
+<p class="n2tbs">
+<a class="n2tb now" href="xuanyin.html">炫音</a>
+<a class="n2tb" href="miaopai.html">视频</a>
+</p>
+</li>
+<li class="n2mn"><a class="n2ta" href="gongyi.html">公益</a></li>
+<li class="n2mn"><a class="n2ta" href="jiabin.html">嘉宾</a></li>
+<li class="n2mn"><a class="n2ta" href="saizhi.html">赛制</a></li>
+<li class="n2mn"><a class="n2ta" href="baoming.html">报名</a></li>
+</ul>
+
+
+
+
+
+
+==========页尾
+
+tail=
+<div class="tailout">
+<div class="tail con cf">
+
+<!--tail--></div>
+<!--tailout--></div>
+
+
+tcols=
+<div class="tcol" id="tcola">
+<h3>分类列表</h3>
+<ul>
+<li><a href="#">宏观经济</a></li>
+<li><a href="#">宏观经济</a></li>
+<li><a href="#">宏观经济</a></li>
+</ul>
+<!--tcola --></div>
+<div class="tcol" id="tcolb">
+<h3>专题&标签</h3>
+<ul>
+<li><a href="#">金融事件</a></li>
+<li><a href="#">新商业模式</a></li>
+<li><a href="#">房地产</a></li>
+</ul>
+<!--tcolb --></div>
+<div class="tcol" id="tcolc">
+<h3>赞助栏目</h3>
+<ul>
+<li><a href="#">资本市场论剑</a></li>
+<li><a href="#">区域经济纵横</a></li>
+<li><a href="#">资本市场论剑</a></li>
+<li><a href="#">资本市场论剑</a></li>
+<li><a href="#">区域经济纵横</a></li>
+<li><a href="#">资本市场论剑</a></li>
+</ul>
+<!--tcolc --></div>
+<div class="tcol" id="tcold">
+<h3>工具资源</h3>
+<ul>
+<li><a href="#">专题订阅</a></li>
+<li><a href="#">标签订阅</a></li>
+<li><a href="#">邮件订阅</a></li>
+<li><a href="#">RSS订阅</a></li>
+<li><a href="#">合作媒体订阅</a></li>
+</ul>
+<!--tcold --></div>
+<div class="tcol" id="tcole">
+<h3>关注我们</h3>
+<ul>
+<li><a href="#">新浪微博</a></li>
+<li><a href="#">腾讯微信</a></li>
+</ul>
+<!--tcole --></div>
+
+
+
+
+
+==========页脚
+
+foot=
+<div class="footout">
+<div class="foot con cf">
+
+<!--foot--></div>
+<!--footout--></div>
+
+
+
+
+
+
+fnav=
+<p class="fnav cf">
+<a href="index.html">首页</a>
+<a class="now" href="jpage.html">关于我们</a>
+<a href="jpage.html">工作职位</a>
+<a href="jpage.html">联系我们</a>
+<a href="jpage.html">免责声明</a>
+<a href="jpage.html">移动应用</a>
+<a href="jpage.html">广告服务</a>
+</p>
+
+<ul class="fnav cf">
+<li><a href="jpage.html">关于我们</a></li>
+<li><a href="jpage.html">关于我们</a></li>
+<li><a href="jpage.html">关于我们</a></li>
+<li><a href="jpage.html">关于我们</a></li>
+</ul>
+
+<p class="fnav"><a href="">增值电信业务经营许可证</a>    <a href="">网络文化经营许可证</a>    <a  class="fhz" href="">版权合作</a>
+
+
+
+
+
+
+fifo=
+<p class="fifo">
+&copy; 2005－2013 新商务服务 , all rights reserved<br>
+京ICP证090015号 京ICP备10027288号 网络视听许可证0110418号<br>
+文网文[2012]0704-291号 京公网安备110905000758 新出网证(京)字189号
+</p>
+
+<p class="fifo">&copy; 2007－2015 <a href="index.html">律蜻蜓</a> , All Rights Reserved</p>
+
+<p class="fifo"><a title="龙头泉" href="/">北京龙头泉环境科技有限公司</a> <a title="longtouquan.com" href="/">www.longtouquan.com</a><br>地址：北京市昌平区政府街 邮编:102206 联系人:王先生<br>手机：1364 101 8484 QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=252945027&site=qq&menu=yes" title="QQ在线">252945027</a><br><span>2006-2016 &copy; 版权所有</span></p>
+
+<p class="fifo">版权所有 © <a href="">中国联合网络通信有限公司</a> 粤ICP备10029056号</p>
+
+<p class="fifo tac">中国联通 · 沃音乐<br/>活动解释权归中国联通沃音乐所有</p>
+
+
+
+
+
+
+
+
+
+gotop=
+<a id="flgotop" title="点击回到顶部"></a>
+
+qq=
+<a href="http://wpa.qq.com/msgrd?v=3&uin=252945027&site=qq&menu=yes" title="QQ在线">252945027</a>
+
+
+
+
+
+
+
+
+wrap= 两栏式大布局
+<div class="wrap con cf">
+
+<div class="main">
+<!--main--></div>
+
+<div class="side">
+<!--side--></div>
+
+<!--wrap--></div>
+
+
+
+
+
+wrap3= 三栏式大布局
+<div class="wrap con cf">
+<div class="cont">
+
+<!--cont--></div>
+<div class="seco">
+
+<!--seco--></div>
+
+<div class="thir">
+
+<!--thir--></div>
+<!--wrap--></div>
+
+
+
+
+
+
+
+
+
+== 翻页
+ips= 居中页码
+<div class="inpages tac">
+<a class="firstpage" href="#">1</a>
+<a class="prepage" href="#">&lt;</a>
+<a href="#">1</a>
+<a href="#">2</a>
+<a class="now" href="#">3</a>
+<a href="#">4</a>
+<a href="#">5</a>
+<a class="nextpage" href="#">&gt;</a>
+<a class="lastpage" href="#">1600</a>
+<em class="pageto">
+<input class="pagetoipt" placeholder="" name="" type="text"><b class="pagetobtn">跳转</b>
+</em>
+<b class="coun">共180000条记录</b>
+<!--inpages --></div>
+
+
+
+gps= 分组页码
+<div class="gpages tac">
+<a href="#">1-10</a>
+<a href="#">11-20</a>
+<a href="#" class="now">21-30</a>
+<a href="#">31-40</a>
+<a href="#">41-50</a>
+<!--gpages --></div>
+
+
+ctt= 上下文页码
+<div class="context cf">
+<a class="cprev" href="jblog.html">前一篇</a>
+<a class="cnext" href="jblog.html">后一篇</a>
+<!--context--></div>
+
+
+
+== 模拟 table头
+ths=
+<h4 class="ths d0ths">
+<i class="th d0cp">排名</i>
+<i class="th d0ctx">选手头像</i>
+<i class="th d0crm">选手名称</i>
+<i class="th d0cgm">歌曲名</i>
+<i class="th d0cps">票数</i>
+<i class="tcao">操作</i>
+</h4>
+
+
+ths0=
+<ul class="ths d0ths">
+<p class="th d0cwho"></p>
+<p class="th d0cifo"></p>
+<p class="tcao"></p>
+</h4>
+
+
+
+== 模拟 table体
+tul=
+<ul class="tul d0tul">
+
+<li class="tli d0tli">
+<p class="td d0cp"><i class="icw ino ino1">01</i></p>
+<p class="td d0ctx"><a class="d0avb" style="background-image:url(pic/avg6.jpg);" href="user.html"></a></p>
+<p class="td d0crm"><a class="d0nme elis" href="user.html">若言</a></p>
+<p class="td d0cgm"><a class="d0sme elis">我是谁</a></p>
+<p class="td d0cps"><i class="d0dep">2142254票</i></p>
+
+<p class="tcao">
+<i class="icw iw3 iplay jsaud ing" audid="01" audurl="media/ee.mp3" audavg="pic/face1.jpg" audbti="我是谁" audnme="若言">试听</i>
+<i class="icw iw3 ivote jsvote ed">投票</i>
+<i class="icw iw3 ishare jshare ed">分享</i>
+<i class="icw iw3 iplay jsaud ing" audid="03" audurl="media/water.mp3" audavg="pic/face1.jpg" audbti="点评2" audnme="点评人">点评</i>
+</p>
+</li>
+
+</ul>
+
+
+
+
+tul0= 简洁 list 头像信息操作
+<ul class="tul d0tul">
+<li class="tli d0tli">
+<p class="td d0cwho"></p>
+<p class="td d0cifo"></p>
+<p class="tcao"></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+pi= 百分比信息
+<p class="rel perifo a0pi">
+<i class="rel blk ht1 per" style="width:70%;">
+<b class="abs ifo">5600000票</b>
+</i>
+</p>
+
+
+== 评论区
+c0area=
+<div class="c0area">
+<h3 class="c0mh cf">评论</h3>
+c0dl
+c0list
+<!-- c0area --></div>
+
+
+
+c3chat=
+<ul class="c3chat" title="c3聊">
+<li class="cf">
+<a class="c3avb" style="background-image:url(skin/avg3.jpg);"></a>
+<p class="c3ifo">
+<a class="c3nme">韩韩若言若言</a>
+<span class="c3say aubr inb">大家好yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</span>
+</p>
+</li>
+
+<li class="cf c3wo">
+<a class="c3avb" style="background-image:url(skin/q4ct.jpg);"></a>
+<p class="c3ifo">
+<a class="c3nme">我</a>
+<span class="c3say aubr inb">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww[微笑]wwwwwwww[微笑]</span>
+</p>
+</li>
+
+<li class="cf">
+<a class="c3avb" style="background-image:url(skin/avg3.jpg);"></a>
+<p class="c3ifo">
+<a class="c3nme">韩韩若言若言</a>
+<span class="c3say aubr inb">flbqs[右太极]</span>
+</p>
+</li>
+
+<li class="cf c3wo">
+<a class="c3avb" style="background-image:url(skin/q4ct.jpg);"></a>
+<p class="c3ifo">
+<a class="c3nme">我</a>
+<span class="c3say aubr inb">ww</span>
+</p>
+</li>
+
+<li class="cf c3wo">
+<a class="c3avb" style="background-image:url(skin/q4ct.jpg);"></a>
+<p class="c3ifo">
+<a class="c3nme">我</a>
+<span class="c3say aubr inb"><img class="c3ct" src="skin/bgall.jpg" /></span>
+</p>
+</li>
+
+<li class="cf">
+<a class="c3avb" style="background-image:url(skin/avg3.jpg);"></a>
+<p class="c3ifo">
+<a class="c3nme">韩韩若言若言</a>
+<span class="c3say aubr inb"><img class="c3ct" src="skin/avg3.jpg" /></span>
+</p>
+</li>
+</ul>
+
+
+
+
+== 视频播放器
+v0area=
+<div class="v0area cf" id="v0area">
+<p class="v0mtas cf">
+<span class="v0mta">
+<em class="v0key">票数</em>
+<b class="v0val">323324</b>
+</span>
+<span class="v0mta">
+<em class="v0key">排行</em>
+<b class="v0val">30</b>
+</span>
+</p>
+<h3 class="v0bti elis" id="v0bti">最远的身边最远的身边最远的身边身边最远的身边最远的身边最远的身边身边</h3>
+
+v0player
+
+<div class="v0info" id="v0info">
+<a href="user.html" class="v0aut" id="v0nme">李瑞生</a>
+<p class="v0acs fz1">
+<b class="btn btnzd jsvote">投票</b>
+<b class="btn btnzd jshare">分享</b>
+</p>
+<!-- v0info --></div>
+
+<p class="v0testbox" id="v0testbox">
+<b id="v0how"></b>
+<b id="v0test"></b>
+<b id="v0buffer"></b>
+<i id="v0prev">v0prev</i>
+<i id="v0next">v0next</i>
+</p>
+
+<!--v0area--></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+avb=<a class="b2yvb" style="background-image:url(skin/avg3.jpg);" href="yiren.html"></a>\n.b2yvb{position:relative;display:block;width:168px;height:168px;border:1px solid #f00;\nbackground-repeat:no-repeat;background-size:cover;border-radius:50%;}\n.b2yvb:before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;\nbackground:url(gr1.png) repeat-x 0 bottom;}\n
+
+
+
+
+
+
+
+
+
+<script src="js/jq.js" async></script>
+<script src="js/flqqbq.js" async></script>
+<script>
+
+flckbox1('.ck');
+function flckbox1(ck){
+var cks=$(ck);
+
+cks.each(function(){
+var ck=$(this),ckipt=ck.find('input'),hascked=ckipt.prop('checked');
+if(hascked){ck.addClass('cked');}else{ck.removeClass('cked');}
+});
+
+cks.click(function(){
+var ck=$(this),ckipt=ck.find('input'),hascked=ckipt.prop('checked');
+var hascked=ckipt.prop('checked');
+if(hascked){ck.addClass('cked');}else{ck.removeClass('cked');}
+});
+
+}/*0.5*/
+
+
+//$('#'+pre+idx).toggleClass('hide');
+
+
+
+</script>
+
+</body>
+</html>

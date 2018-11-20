@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<meta name="renderer" content="webkit|ie-stand"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=edge,chrome=1"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no, email=no"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="x5-page-mode" content="app"/>
+<meta name="browsermode" content="application"/>
+<meta name="wap-font-scale" content="no"/>
+<link href="skin/a_base.css" rel="stylesheet"/>
+<meta name="author" content="feilong.org"/>
+<title>模板文件基础</title>
+<style>
+
+
+ html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？
+
+新特性：
+
+1. 语义化标签（header,nav,footer,aside,article,section）
+2. 音频、视频API(audio,video)
+3. 拖拽释放(Drag and drop) API
+4. 画布(Canvas) API
+5. 地理(Geolocation) API
+6. 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+7. sessionStorage 的数据在浏览器关闭后自动删除
+8. 表单控件，calendar、date、time、email、url、search  
+9. 新的技术webworker, websocket, Geolocation
+
+移除的元素：
+1. 纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+2. 对可用性产生负面影响的元素：frame，frameset，noframes；
+
+支持HTML5新标签：
+html5.js
+　　
+
+如何区分：
+DOCTYPE声明
+
+
+
+
+
+
+
+
+
+Doctype作用？
+告知浏览器的解析器用什么文档标准 解析这个文档。
+如果DOCTYPE不存在或格式不对，自动进入兼容模式。
+ 
+各有什么区别?
+A：标准模式以该浏览器支持的最高ie标准运行。
+兼容模式又叫怪异模式，模拟老式浏览器。
+前端应该尽量避免使用兼容模式。
+
+不同之处举例：
+1.width不同
+在严格模式中 ：width只是内容宽度
+在兼容模式中 ：width有可能包括了内容边沿和内距
+
+2.标准用margin:auto可以使块状元素水平居中。
+兼容模式下有可能失效。
+
+
+
+
+
+
+
+
+
+
+
+前端页面有哪三层构成，分别是什么?作用是什么?
+
+三层：结构层html、表现层css、行为层js。
+结构层处理内容结构。
+表现层修饰外观效果。
+行为层实现事件行为。
+
+
+
+
+XHTML与html的区别：
+XHTML 元素必须被正确地嵌套。
+XHTML 元素必须被关闭。
+标签名必须用小写字母。
+XHTML 文档必须拥有根元素。
+
+
+	
+
+vue和react不同处：
+
+对DOM的渲染方式不同:
+vue直接使用html标签，数据绑定类似angular，可以进行条件渲染，
+而react采用了jsx语法。
+
+vue和react相同点：
+设计理念是一样的，比如：都用到component组件，props参数传递，组件之间的通信，state状态管理器等，mvc或mvvc
+
+
+vue和react不同处：
+
+对DOM的渲染方式不同:
+vue直接使用html标签，数据绑定类似angular，可以进行条件渲染，
+而react采用了jsx语法。
+
+vue和react相同点：
+设计理念是一样的，比如：都用到component组件，props参数传递，组件之间的通信，state状态管理器等，mvc或mvvc
+
+
+
+
+闭包是什么，有什么特性，对页面有什么影响
+
+
+
+闭包是这种返回子函数的函数，便于间接执行子变量或子函数。
+function a(){
+   var i=0;
+   function b(){
+	  alert(++i);
+   }
+	  return b;
+}
+var c = a();c();
+
+ 
+
+闭包特性：
+
+①.封闭性：如果闭包内声明变量，外界无法访问。
+②.持久性：外部函数被调用之后，闭包中数据依然存在。
+
+优点：
+① 减少全局变量。
+② 减少传递函数的参数量
+③ 封装；
+
+缺点：
+使用闭包会占有内存资源，过多的使用会导致内存溢出，
+
+
+
+
+
+	
+</head>
+<body id="jBase">
+
+
+tb
+
+
+
+<script>
+
+//字符串中出现次数最多的字符及出现的次数
+var j0str = 'asdfssaaasasasasaa';
+
+var j0obj = {};
+for (var i = 0; i < j0str.length; i++) {
+	if (!j0obj[j0str.charAt(i)]) {
+		j0obj[j0str.charAt(i)] = 1;
+	} else {
+		j0obj[j0str.charAt(i)]++;
+	}
+}
+
+var j0num = '';
+var j0m=0;
+for (var i in j0obj) {
+	if (j0obj[i]>j0m) {
+		j0m = j0obj[i];
+		j0num = i;
+	}
+}
+//console.log('出现最多的值是'+j0num);
+//console.log('出现次数为'+j0m);
+	  
+
+第一页 第10题：
+<a onmouseover="window.status='http://www.yilulu.com';
+return true;" onmouseout="window.status='Done';return true;"
+href="http://www.yilulu.com" target="_blank">打开窗口</a>
+
+
+
+
+
+pop() 删除数组最后1个元素
+push() 数组末尾添加n个元素
+shift()删除数组第1个元素
+unshift()数组前部添加n元素
+
+
+
+typeof运算符返回数据类型的字符串。 
+可能有： number string boolean object function undefined
+
+
+
+
+css盒子模型；基本造型方便的模型是 宽高内沿外。
+按box-sizing的不同，分为2种：
+ border-box宽到边 和
+ 常见的content-box宽到内容;
+
+
+
+CSS选择器：
+主要有 通配符，标签，类，ID。
+还有属性过滤，伪类，伪元素等。
+还有后代，子，相邻兄弟。
+优先级：声明在后的优先， 匹配越复杂的优先。id优先。等。
+
+
+
+web前端工程师笔试题
+
+
+第4题
+position:absolute;left:50%;top:50%;
+width:200px;height:200px;
+margin-left:-100px;margin-top:-100px;
+
+第6题。
+外链 link标签常见。
+内联 style标签写css放head常见。
+内嵌：直接写标签style属性，少用。
+导入：import写css文件内，有延迟渲染。
+
+
+卷子第三页
+
+编码人员测试题
+1、前端必备前置文档条件
+前端语言、框架与工具，具体任务目标、进度要求
+
+2、文档 有 页面静态演示、功能补充说明，实现程度，重要测试点之类。
+
+3、结果物
+成品或中间件、代码注释、说明文件
+
+4、提交到 svn 公共代码库和备份库
+
+5、团队大概几十人。有后端组和前端组个十几个人。我担任前端开发写页面、效果交互、数据交互。技术属中上。项目学果果已上线。
+
+前端开发测试题：
+1、主要熟悉jQuery bs 和 vue，了解node和angular。
+浏览器版本适用性主要处理浏览器兼容，响应式、自适应和流体3种布局，还有js兼容等。
+响应速度则是性能优化，语义化、结构化、简易化、数据与模板分离mvc之类。
+
+2、业务接口切割：
+前端负责页面htmlcss 和页面操作交互，页面数据交互。
+后端负责页面所需数据来源，即接口开发和数据获取演示。
+两人需提早沟通接口结构。数据获取演示需由后端做好，以减少联调沟通的成本。
+
+3、前端业务逻辑包括页面之间的内容流转，业务实现流程。共享资源有htmlcssjs图片图标，不共享资源包括表单提交的数据之类。
+
+
+
+	
+</script>
+
+</body>
+</html>

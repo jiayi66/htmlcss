@@ -1,0 +1,170 @@
+@charset "utf-8";
+/*****  
+2a-shape.css for the CSS Temple. Do not use it directly.
+试验写法，不可实际直接使用
+Version: fl20140814gz
+Author: Feilong & Spring
+Author URI: http://feilong.org
+*****/
+
+
+
+/*以 display:block 为基本盒子进行分析,css的各种写法 */
+
+
+
+/***  一、盒子外形. 2a-shape.css  ***/
+
+
+/** 1面积 **/
+.area{width:300px;height:20px;line-height:20px;}/*line-height 是 字符行高. 因为与 盒子高度 关系甚大，所以飞龙将它与height并行. */
+
+/*width */
+.wauto{width:auto;}.per100{width:100%;}.w2{width:2em;}.wa{width:12px;}
+.w5m{max-width:5em;}.wam{max-width:100px;}.w8n{min-width:8em;}.wan{min-width:12px;}
+
+/*height */
+.ht1{height:100%;}.lhn{line-height:normal;}
+.htit{height:32px;line-height:32px;}.lh20{line-height:20px;}
+
+
+/** 2周边  border 是第一关键周边  top right bottom left = trbl **/
+.around{padding:6px 6px 6px 6px;border:1px solid #ccc;margin:20px auto 0 auto;}
+
+/*padding*/
+.pa{padding:12px;}.patwo{padding:6px 12px;}.pafour{padding:8px 0 8px 12px;}
+.pta{padding-top:10px;}.pra{padding-right:10px;}.pba{padding-bottom:10px;}.pla{padding-left:10px;}
+.p2{padding:2%;}.p2t{padding-top:2%;}.p2r{padding-right:2%;}.p2b{padding-bottom:2%;}.p2l{padding-left:2%;}
+
+/*border*/
+/*单线*/
+.bt{border-top:1px solid #ccc;}
+.br{border-right:1px solid #ccc;}
+.bb{border-bottom:1px solid #ccc;}
+.bl{border-left:1px solid #ccc;}
+
+/*共角*/
+.ba{border-top:1px solid #ccc;border-left:1px solid #ccc;}
+.bb{border-top:1px solid #ccc;border-right:1px solid #ccc;}
+.bc{border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.bd{border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+
+/*对边*/
+.btb{border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+.brl{border-right:1px solid #ccc;border-left:1px solid #ccc;}
+
+/*三包 坐边 */
+.bn{border-top:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;}
+.be{border-top:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.bs{border-right:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+.bw{border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+
+/*四围*/
+.b{border:1px solid #ccc;}
+
+
+
+
+
+
+/**** shape.css. DO NOT use directly ****/
+
+
+
+/*** width ***/
+.wauto{width:auto!important;}
+
+.w2{width:2em;}.w2m{max-width:2em;}
+.w3{width:3em;}.w3m{max-width:3em;}
+.w4{width:4em;}.w4m{max-width:4em;}
+.w5{width:5em;}.w5m{max-width:5em;}
+.w6{width:6em;}.w6m{max-width:6em;}
+.w7{width:7em;}.w7m{max-width:7em;}
+.w8{width:8em;}.w8m{max-width:8em;}
+.w9{width:9em;}.w9m{max-width:9em;}
+.w10{width:10em;}.w10m{max-width:10em;}
+
+.w12{width:12em;}.w12m{max-width:12em;}
+.w14{width:14em;}.w14m{max-width:14em;}
+.w16{width:16em;}.w16m{max-width:16em;}
+.w18{width:18em;}.w18m{max-width:18em;}
+.w20{width:20em;}.w20m{max-width:20em;}
+.w22{width:22em;}.w22m{max-width:22em;}
+.w24{width:24em;}.w24m{max-width:24em;}
+
+.per10{width:10%;}
+.per20{width:20%;}.per25{width:25%;}
+.per30{width:30%;}.per33{width:33%;}.per34{width:34%;}
+.per40{width:40%;}.per45{width:45%;}.per48{width:48%;}
+.per50{width:50%;}.per52{width:52%;}.per55{width:55%;}
+.per60{width:60%;}.per67{width:67%;}.per66{width:66%;}
+.per70{width:70%;}.per75{width:75%;}
+.per80{width:80%;}
+.per90{width:90%;}
+.per94{width:94%;}.per95{width:95%;}.per96{width:96%;}.per97{width:97%;}.per98{width:98%;}.per99{width:99%;}
+.per100{width:100%;}
+
+
+
+/*** height, line-height ***/
+.ht1{height:100%;}
+.lhn{line-height:normal;}
+
+/*不可在具体项目中使用*/
+.lh17{line-height:17px;}.lh19{line-height:19px;}
+.lh21{line-height:21px;}.lh23{line-height:23px;}
+
+
+
+/***padding 不可以在具体项目中使用 ***/
+/**padding px **/
+.pa{padding:3px}.pta{padding-top:3px}.pra{padding-right:3px}.pba{padding-bottom:3px}.pla{padding-left:3px}
+.pb{padding:6px}.ptb{padding-top:6px}.prb{padding-right:6px}.pbb{padding-bottom:6px}.plb{padding-left:6px}
+.pc{padding:9px}.ptc{padding-top:9px}.prc{padding-right:9px}.pbc{padding-bottom:9px}.plc{padding-left:9px}
+.pd{padding:12px}.ptd{padding-top:12px}.prd{padding-right:12px}.pbd{padding-bottom:12px}.pld{padding-left:12px}
+.pd{padding:15px}.pte{padding-top:15px}.prd{padding-right:15px}.pbd{padding-bottom:15px}.pld{padding-left:15px}
+.pe{padding:18px}.ptf{padding-top:18px}.pre{padding-right:18px}.pbe{padding-bottom:18px}.ple{padding-left:18px}
+
+/**padding % **/
+.p1{padding:1%}.pt1{padding-top:1%}.pr1{padding-right:1%}.pb1{padding-bottom:1%}.pl1{padding-left:1%}
+.p2{padding:2%}.pt2{padding-top:2%}.pr2{padding-right:2%}.pb2{padding-bottom:2%}.pl2{padding-left:2%}
+.p3{padding:3%}.pt3{padding-top:3%}.pr3{padding-right:3%}.pb3{padding-bottom:3%}.pl3{padding-left:3%}
+.p4{padding:4%}.pt4{padding-top:4%}.pr4{padding-right:4%}.pb4{padding-bottom:4%}.pl4{padding-left:4%}
+
+
+
+
+/***border ***/
+
+.bt0{border-top:0 !important;}
+.br0{border-right:0 !important;}
+.bb0{border-bottom:0 !important;}
+.bl0{border-left:0 !important;}
+
+/*以下不要在具体项目中使用*/
+.bt{border-top:1px solid #ccc;}
+.br{border-right:1px solid #ccc;}
+.bb{border-bottom:1px solid #ccc;}
+.bl{border-left:1px solid #ccc;}
+.bn{border-top:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;}
+.be{border-top:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.bs{border-right:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+.bw{border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+.b{border:1px solid #ccc;}
+.bsa{border-style:dashed !important;}/* 当有缺口时候，缺口边框必须置0 */
+.bsb{border-style:dotted !important;}/* 当有缺口时候，缺口边框必须置0 */
+.bca{border-color:#a5b2c5 !important;}
+.bcb{border-color:#f00 !important;}
+.bcc{border-color:blue !important;}
+
+
+
+
+/***margin 移动到 fix.css ***/
+
+
+
+
+
+
+/*****end of 2a-shape.css *****/

@@ -1,0 +1,228 @@
+@charset "utf-8";
+/*****  
+2d-effect.css for the CSS Temple. Do not use it directly.
+试验写法，不可实际直接使用
+Version: fl20140814gz
+Author: Feilong & Spring
+Author URI: http://feilong.org
+*****/
+
+
+
+
+
+/****  effect.css.  Seldom use them ****/
+
+
+
+/*常用css3属性 */
+
+
+/** border-radius
+http://www.css3-generator.de/border-radius.html
+http://www.css3maker.com/border-radius.html
+http://border-radius.com
+**/
+/*上左右，下右左。只有bottom-right 不符(跨角)顺时针转*/
+.ra{border-top-left-radius:4px;}
+.rb{border-top-right-radius:4px;}
+.rc{border-bottom-right-radius:4px;}
+.rd{border-bottom-left-radius:4px;}
+
+.rn{border-top-right-radius:4px;border-top-left-radius:4px;}
+.re{border-top-right-radius:4px;border-bottom-right-radius:4px;}
+.rs{border-bottom-right-radius:4px;border-bottom-left-radius:4px;}
+.rw{border-bottom-left-radius:4px;border-top-left-radius:4px;}
+
+.r{border-radius:4px;}
+.r12{border-radius:12px;}
+.r50{border-radius:50%;}
+
+/* special radius */
+.r12{border-radius:8px;}
+.ra1{border-top-left-radius:10px 5px;}
+.r4d{ border-radius:33px 11px 77px 22px;}
+.r4f{border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;}
+.r4g{border-radius: 5px 10px / 10px;}
+
+
+
+
+
+
+
+/** box-shadow
+http://www.css3-generator.de/box-shadow.html
+**/
+.bsd{-webkit-box-shadow:0 0 5px #333;-moz-box-shadow:0 0 5px #333;box-shadow:0 0 5px #333;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#333333', Direction=145, Strength=3);} /* zhong */
+.bsd-da{-webkit-box-shadow:0 0 8px #333;-moz-box-shadow:0 0 8px #333;box-shadow:0 0 8px #333;} /* da */
+.bsd-xiao{border:1px solid #fff;-webkit-box-shadow:0 0 1px #333;
+-moz-box-shadow:0 0 1px #333;box-shadow:0 0 1px #333;} /* xiao */
+.bsd-x{-webkit-box-shadow:5px 0 0 #50b;-moz-box-shadow:5px 0 0 #50b;box-shadow:5px 0 0 #50b;} /* x offset */
+.bsd-y{-webkit-box-shadow:0 5px 0 #50b;-moz-box-shadow:0 5px 0 #50b;box-shadow:0 5px 0 #50b;}/* y offset */
+.bsd-z{-webkit-box-shadow:0px 0 60px #f30;-moz-box-shadow:0px 0 60px #f30;box-shadow:0px 0 60px #f30;} /* z offset */
+.bsy{box-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.4);}
+.bsds{-webkit-box-shadow:0 0 8px #333;-moz-box-shadow:12px 12px 8px #333;box-shadow:12px 12px 8px #333;}
+
+.bsi{-webkit-box-shadow:inset 0 0 5px #333;-moz-box-shadow:inset 0 0 5px #333;box-shadow:inset 0 0 5px #333;} /* inset */
+
+.bsie{filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=145, Strength=3);}
+
+
+
+
+
+/** text-shadow
+http://www.css3-generator.de
+**/
+.tsd{text-shadow:1px 1px 1px #fff;}
+
+
+/** gradient
+http://www.colorzilla.com/gradient-editor
+http://angrytools.com/gradient 
+**/
+.gr{background:-moz-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(100%,rgba(230,230,230,1)));background:-webkit-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:-o-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:-ms-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:linear-gradient(0deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e6e6',GradientType=0);}
+
+
+
+
+
+
+
+/*** box-sizing ***/
+.bzb{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+.bzc{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;}
+
+
+/*** user-select ***/
+.usn{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+
+
+
+
+/*** transition css3 动画
+http://www.css3maker.com/css3-transform.html
+http://angrytools.com/css/animation/
+***/
+.trs{transition:all 1s ease-in 6s;}
+
+
+/*** animation ***/
+.pulse {-webkit-animation: pulse ease-in-out 1 normal 3000ms; -moz-animation: pulse ease-in-out 1 normal 3000ms; -ms-animation: pulse ease-in-out 1 normal 3000ms;-o-animation: pulse ease-in-out 1 normal 3000ms; animation: pulse ease-in-out 1 normal 3000ms; }
+ /*animation7个简写：名 时 速, 待 次 向, 回。
+ 飞龙博客  name, duration, timing-function, delay, iteration-count, direction, play-state, fill-mode
+2015年8月28日*/
+
+
+
+
+
+/*** filter 盒子透明***/
+.opa0{opacity:0;filter:alpha(opacity=0);}
+.opa1{opacity:0.5;filter:alpha(opacity=50);}
+.opa2{opacity:0.8;filter:alpha(opacity=80);}
+.opa img{opacity:0.9;filter:alpha(Opacity=90);*filter:none;}
+.opa:hover img{opacity:1;filter:alpha(Opacity=100);*filter:none;}
+/**suggested hei60 背景图透明**/
+.fi0{background-image:url(hei60.png);}
+.fi1{background-image:url(hei61.png);}
+.fi2{background-image:url(hei62.png);}
+.fi3{background-image:url(hei63.png);}
+.fi4{background-image:url(hei64.png);}
+/**rgba 包括字色和背景色透明 不兼容 ie678**/
+.rgba{
+color:rgba(0,100,100,0.1);
+background:rgba(255, 255, 255,0.4);
+background-color:rgba(255,255,255,0.6);
+background-color:rgba(0,0,0,0.6);
+background-image:url(hei60.png);
+}
+
+.tsa{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+
+
+
+
+
+
+/*** marquee 改用 专门js插件做 ***/
+
+.marquee{overflow:hidden}
+.marquee.marquee-speed-drowsy:before{-webkit-animation-duration:30s;animation-duration:30s}
+@-webkit-keyframes movement-smooth{from{left:100%;-webkit-transform:translateX(0);transform:translateX(0)}
+to{left:0;-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+}
+@keyframes movement-smooth{from{left:100%;-webkit-transform:translateX(0);transform:translateX(0)}
+to{left:0;-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+}
+.marquee.marquee-movement-smooth:before{-webkit-animation-name:movement-smooth;animation-name:movement-smooth}
+.marquee.marquee-direction-left:before,
+.marquee.marquee-direction-normal:before{-webkit-animation-direction:normal;animation-direction:normal}
+.marquee.marquee-direction-alternate:before{-webkit-animation-direction:alternate;animation-direction:alternate}
+.marquee.marquee-direction-reverse:before,
+.marquee.marquee-direction-right:before{-webkit-animation-direction:reverse;animation-direction:reverse}
+.marquee:before{position:relative;left:50%;display:inline-block;
+content:attr(data-marquee);white-space:nowrap;
+-webkit-transform:translateX(-50%);transform:translateX(-50%);-ms-transform:translateX(-50%);
+-webkit-animation:linear infinite;animation:linear infinite}
+.marquee:before{-webkit-animation-duration:10s;animation-duration:10s}
+.marquee:before{-webkit-animation-name:movement-smooth;animation-name:movement-smooth}
+.marquee:before{-webkit-animation-direction:normal;animation-direction:normal}
+
+/*https://github.com/muchweb/html5-marquee*/
+/*<div class="marquee" data-marquee="Text contents"></div>
+<div class="marquee marquee-speed-drowsy" data-marquee="Medium text medium text medium text"></div>*/
+
+/***css3 pie ***/
+.pie{behavior:url(PIE.htc);}
+
+
+
+
+
+
+
+
+
+/****  effect.css.  Seldom use them ****/
+
+
+
+
+
+
+
+
+
+
+
+/*** marquee ***/
+.marq{width:300px;
+white-space:nowrap;
+overflow:-webkit-marquee;
+-webkit-marquee-direction:forwards;
+-webkit-marquee-speed:slow;
+-webkit-marquee-style:alternate;
+}
+
+
+
+/***css3 pie 已经不需要兼容ie678 ***/
+.pie{behavior:url(PIE.htc);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****  end of  2d-effect.css *****/

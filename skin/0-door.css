@@ -1,0 +1,700 @@
+@charset "utf-8";
+/*****  
+0-door.css is the Door of CSS Temple. Do not use it directly.
+飞龙提示： 试验写法，不可实际直接使用.
+此文件css选择器 为属性写法, 非对象写法. 所以不适合直接在具体项目中使用, 仅供学习和参考!
+实际项目中, 可以使用 a_base.css, a_base_mobile.css
+Version: fl20151205gz
+Author: Feilong & Spring
+Author URI: http://feilong.org
+*****/
+
+
+/***  飞龙css写法大汇合,css 28宿 注意排列顺序 ***/
+.feilong{
+/*1定位*/
+position:relative;position:fixed;
+position:absolute;top:0;right:0;bottom:0;left:0;z-index:2;
+position:absolute;left:50%;top:50%;z-index:10;
+margin-top:-10px;margin-left:-150px;
+left:50%;top:50%;
+-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);
+
+/*2浮动*/
+float:left;float:right;float:none;clear:both;
+/*3外界*/
+margin-top:15px;margin-right:15px;margin-bottom:15px;margin-left:15px;
+margin:0 auto;margin:0 3%;margin:20px auto 0;
+margin-right:auto;margin-left:auto;
+
+/*4显示*/
+display:none;display:block;
+display:inline-block;*display:inline;*zoom:1;vertical-align:middle;
+/*5隐现*/
+visibility:hidden;visibility:visible;
+
+
+
+/*6宽 7高 8行高*/
+width:300px;height:20px;line-height:20px;
+width:auto;height:auto;
+width:100%;height:100%;
+min-width:200px;min-height:800px;
+max-width:1000px;max-height:1000px;max-width:100%;
+/*9内距*/
+padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;
+padding:6px 0 6px 10px;padding:6px 0 6px;padding:6px 0;padding:6px;
+/*10边沿*/
+border-top:1px solid #ccc;border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;border-left:1px solid #ccc;
+border-color:#ccc;border-style:solid;border-width:1px 0 0 1px;
+border:1px solid #ccc;border:1px dashed #ccc;
+
+
+
+/*11背景*/
+background:#fff url(flnav.png) no-repeat center center/100% 100%;
+background-color:#f00;background-color:rgba(255,255,255,0.6);
+background-color:rgba(0,0,0,0.6);background-image:url(hei60.png);
+background-repeat:no-repeat;background-position:center 0;
+background-size:cover;background-size:cotain;background-size:auto 100%;
+background-attachment:fixed;
+
+
+
+/*字色，形状（字号、字粗细、字正斜、字体），摆放（行高需前置，水平对齐、垂直对齐，字符间距、换行与否、溢出咋办），装饰*/
+/*12字色*/
+color:#000;color:#333;color:#666;color:#999;
+color:#ccc;color:#ddd;color:#eee;color:#fff;
+color:rgba(0,0,0,0.8);
+
+/*13字号 14字粗细 15字正斜 16字体 */
+font-size:12px;font-size:14px;font-size:16px;font-size:18px;font-size:20px;
+font-weight:400;font-weight:600;
+font-style:italic;font-style:normal;
+font-family:'Microsoft YaHei','SimSun','SimHei',Tahoma,Arial,Helvetica,Verdana,sans-serif;
+font-family:'Microsoft YaHei';font-family:'Simsun';
+
+
+/* 17a字符缩进 17水平对齐 18垂直对齐*/
+text-align:left;text-align:center;text-align:right;
+vertical-align:baseline;vertical-align:middle;
+vertical-align:bottom;vertical-align:top;
+
+
+/*19字符间距 20换行与否 21溢出咋办 */
+letter-spacing:1px;white-space:nowrap;
+overflow:hidden;overflow:auto;
+
+
+/*22字符装饰 23光标装饰 24轮廓装饰*/
+text-decoration:underline;text-decoration:none;
+cursor:pointer;outline:none;
+
+
+/* 25 box-sizing */
+-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;
+box-sizing:border-box;
+
+}
+
+
+
+/* 26圆角 27盒子投影 28渐变，请参考 2d-effect.css */
+/** border-radius
+http://www.css3-generator.de/border-radius.html
+http://www.css3maker.com/border-radius.html
+http://border-radius.com
+**/
+
+.ra{border-top-left-radius:4px;}
+.rb{border-top-right-radius:4px;}
+.rc{border-bottom-right-radius:4px;}
+.rd{border-bottom-left-radius:4px;}
+
+.rn{border-top-right-radius:4px;border-top-left-radius:4px;}
+.re{border-top-right-radius:4px;border-bottom-right-radius:4px;}
+.rs{border-bottom-right-radius:4px;border-bottom-left-radius:4px;}
+.rw{border-bottom-left-radius:4px;border-top-left-radius:4px;}
+
+.r4{border-radius:4px;}
+.r12{border-radius:12px;}
+.r50{border-radius:50%;}
+
+/* special radius */
+.r12{border-radius:8px;}
+.ra1{border-top-left-radius:10px 5px;}
+.r4d{ border-radius:33px 11px 77px 22px;}
+.r4f{border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;}
+.r4g{border-radius: 5px 10px / 10px;}
+
+
+
+
+
+
+
+/** box-shadow
+http://www.css3-generator.de/box-shadow.html
+**/
+.bsd{-webkit-box-shadow:0 0 5px #333;-moz-box-shadow:0 0 5px #333;box-shadow:0 0 5px #333;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#333333', Direction=145, Strength=3);} /* zhong */
+.bsd-da{-webkit-box-shadow:0 0 8px #333;-moz-box-shadow:0 0 8px #333;box-shadow:0 0 8px #333;} /* da */
+.bsd-xiao{border:1px solid #fff;-webkit-box-shadow:0 0 1px #333;
+-moz-box-shadow:0 0 1px #333;box-shadow:0 0 1px #333;} /* xiao */
+.bsd-x{-webkit-box-shadow:5px 0 0 #50b;-moz-box-shadow:5px 0 0 #50b;box-shadow:5px 0 0 #50b;} /* x offset */
+.bsd-y{-webkit-box-shadow:0 5px 0 #50b;-moz-box-shadow:0 5px 0 #50b;box-shadow:0 5px 0 #50b;}/* y offset */
+.bsd-z{-webkit-box-shadow:0px 0 60px #f30;-moz-box-shadow:0px 0 60px #f30;box-shadow:0px 0 60px #f30;} /* z offset */
+.bsy{box-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.4);}
+.bsds{-webkit-box-shadow:0 0 8px #333;-moz-box-shadow:12px 12px 8px #333;box-shadow:12px 12px 8px #333;}
+
+.bsi{-webkit-box-shadow:inset 0 0 5px #333;-moz-box-shadow:inset 0 0 5px #333;box-shadow:inset 0 0 5px #333;} /* inset */
+
+.bsie{filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=145, Strength=3);}
+
+
+
+
+
+/** text-shadow
+http://www.css3-generator.de
+**/
+.tsd{text-shadow:1px 1px 1px #fff;}
+
+
+/** gradient
+http://www.colorzilla.com/gradient-editor
+http://angrytools.com/gradient 
+**/
+.gr{background:-moz-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(100%,rgba(230,230,230,1)));background:-webkit-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:-o-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:-ms-linear-gradient(90deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);background:linear-gradient(0deg,rgba(230,230,230,1) 0%,rgba(255,255,255,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e6e6',GradientType=0);}
+
+
+
+
+
+
+
+/*** box-sizing ***/
+.bsb{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+.bsc{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;}
+
+
+/*** user-select ***/
+.usn{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+
+
+
+
+/*** transition css3 动画
+http://www.css3maker.com/css3-transform.html
+http://angrytools.com/css/animation/
+***/
+.tra{transition:all 1s ease-in 6s;}
+
+
+/*** animation ***/
+.pulse {-webkit-animation: pulse ease-in-out 1 normal 3000ms; -moz-animation: pulse ease-in-out 1 normal 3000ms; -ms-animation: pulse ease-in-out 1 normal 3000ms;-o-animation: pulse ease-in-out 1 normal 3000ms; animation: pulse ease-in-out 1 normal 3000ms; }
+ /*animation7个简写：名 时 速, 待 次 向, 回。
+ 飞龙博客  
+ name, duration, timing-function, 
+ delay, iteration-count, direction, 
+ play-state, 
+ fill-mode
+ 
+2015年8月28日*/
+
+
+
+
+
+/*** filter 盒子透明***/
+.opa0{opacity:0;filter:alpha(opacity=0);}
+.opa1{opacity:0.5;filter:alpha(opacity=50);}
+.opa2{opacity:0.8;filter:alpha(opacity=80);}
+.opa img{opacity:0.9;filter:alpha(Opacity=90);*filter:none;}
+.opa:hover img{opacity:1;filter:alpha(Opacity=100);*filter:none;}
+/**suggested hei60 背景图透明**/
+.fi0{background-image:url(hei60.png);}
+.fi1{background-image:url(hei61.png);}
+.fi2{background-image:url(hei62.png);}
+.fi3{background-image:url(hei63.png);}
+.fi4{background-image:url(hei64.png);}
+/**rgba 包括字色和背景色透明 不兼容 ie678**/
+.rgba{
+color:rgba(0,100,100,0.1);
+background:rgba(255, 255, 255,0.4);
+background-color:rgba(255,255,255,0.6);
+background-color:rgba(0,0,0,0.6);
+background-image:url(hei60.png);
+}
+
+.tsa{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+
+
+
+/**** css写法 大纲
+
+飞龙把css写法 归纳为 以下五个大纲：
+
+一、位置:  a-locate.css 
+1 定位： 相对、绝对、固定，楼层。
+2 浮动：浮动也是特殊位置，因此排序在此。
+3 外界：有微调位置的作用，因此排序在此。
+
+二、盒性：b-show.css
+4 显示:行内、块状、行内块状
+5 隐现:visibililty
+(box-sizing是css3属性,排序后置)
+
+三、盒子外形:  c-shape.css 
+面积: 6宽、7高、8行高（行高为配合高故排序在此）
+周边: 9内、10沿
+(外界,margin, 排序已前置)
+（内、沿、外界，四个方位的排列顺序：上、右、下、左） 
+
+四、盒子内容:  2d-font.css
+11背景： 背景色和背景图
+
+字符：又可叫前景。
+12字色，
+形状（13字号、14粗细、15正斜、16字体），
+摆放（行高排序已前置，17水平对齐、18垂直对齐，19字符间距、20换行与否、21溢出咋办），
+装饰(22字符、23光标、24轮廓) 
+
+五、css3属性:  e-effect.css
+常见属性：25 box-sizing、26圆角、盒27子投影、28渐变
+
+六、修补：溢出 居中
+
+
+
+以上八个方面：
+位置、盒性，面积、周边，
+背景、字符，css3、修补。
+
+可以细分为28星宿，排序为：
+
+位置(1定位、2浮动、3外界)，
+盒性(4显示、5隐现)。
+
+面积(6宽、7高、8行高)，
+周边(9内、10沿)。
+
+11背景，
+字符(12字色， 
+13字号、14粗细、15正斜、16字体， 
+17水平对齐、18垂直对齐， 
+19字符间距、20换行与否、21溢出咋办， 
+22字符装饰、23光标装饰、24轮廓装饰 )。
+
+css3属性（25 box-sizing、26圆角 27盒子投影 28渐变）。
+
+
+position float margin
+display visibililty
+
+width height line-height 
+padding border
+
+background
+
+color
+font-size font-weight font-style font-family
+text-align vercital-align
+letter-spacing white-space overflow
+text-decoration cursor outline
+
+box-sizing
+border-radius box-shadow gradient
+
+
+最好的css净化工具： http://tool.lu/css
+但是css整理不安全. css净化 可用
+
+****/
+
+
+
+ 
+
+
+
+
+/* 序选择器 */
+tr:first-child{}
+tr:last-child{}
+
+tr:nth-child(odd){}
+tr:nth-child(2n){}
+tr:nth-child(even){}
+
+
+tr:nth-child(2n+1){}
+span:nth-child(0n+1){}
+span:nth-child(1){}
+span:nth-child(-n+3){}
+
+
+
+
+
+
+
+/***  四、html css 常识：   ***/
+
+/*
+背景图有3种： 颜色丰富jpg 、样式单调gif、 透明png
+
+样式选择器主要有5种: ID、 标签、类、伪类、属性。建议多用类，少用其它。
+
+
+css 注释星级写法规定： 
+css样式文件 5星 ***** 
+大区 4星 比如  ****
+板块 3星 ***  
+模块 2星 **()
+模块部件 1星 *
+css选择器注释 1星并写在后面 *
+
+
+
+
+css样式表 内容排序计划：
+
+基础base：重置reset、盒子box、修补fix
+公用common：零件gear、布局layout、组件widget
+特别special：首页index、类页cat、详情页detail
+
+
+
+css样式表 内容排序具体：
+
+/***** base.css *****/
+
+	/****reset****/
+		/**preset**/
+
+	/****box****/
+		/***locate***/
+		/***show***/
+		/***shape***/
+		/***font***/
+		/***css3***/
+		
+	/****fix****/
+
+
+/***** common.css *****/
+
+	/****gear****/
+			/***icon***/
+			/***table***/
+			/***form***/
+				/**ipt**/
+				/**btn**/
+				/**slt**/
+				/**tarea**/
+				/**ckbox**/
+				/**radio**/
+				/**file**/
+
+	
+	
+	
+	/****layout****/
+	
+		/***grid***/
+			/**col**/
+			/**gap**/
+			/**wel**/
+			/**wyqc**/
+			/**fb**/
+			
+			
+		/***top***/
+			/**topcut**/
+			/**soboxb | soboxi**/
+			/**logbox**/
+			
+		/***head***/
+			/**h1.siteh**/
+			/**nav**/
+			
+
+		/***tail***/
+			/**tcol**/
+
+
+			
+		/***foot***/
+			/**fnav**/
+			/**fifo**/
+			
+			
+			
+		/***wrap***/
+			/**main**/
+			/**seco**/
+
+		/***navhere***/
+		/***pagemenu***/
+		/***pagenavi***/
+		
+		/***iframe***/
+		
+
+	
+	/****widget****/
+		/***slider***/
+		/***audioplayer***/
+		/***videoplayer***/
+
+
+/***** special.css *****/
+	/**** index.html ****/
+	
+	/**** blogcat.html ****/
+	/**** blog.html ****/
+	
+	/**** goodcat.html ****/
+	/**** good.html ****/
+
+
+	
+	
+	
+
+
+/**** 八、模版文件架构：
+
+以下css写在style.css 企业站主题专用 ****/
+
+/*** Spring 布局 ***/
+
+/**** Spring 首页 index.html ****/
+
+/**** Spring 博客类页 jblogcat.html ****/
+/**** Spring 博客详情页 jblog.html ****/
+
+/**** Spring 产品类页 jgoodcat.html ****/
+/**** Spring 产品详情页 jgood.html ****/
+
+/**** Spring 单页 jpage.html ****/
+
+
+
+
+/**** 以下css写在style.css 具体项目css 主样式表中 ****/
+
+/**** Spring 布局 ****/
+
+/**** Spring 首页 index.html ****/
+
+/**** Spring 博客类页 jblogcat.html ****/
+/**** Spring 博客详情页 jblog.html ****/
+
+/**** Spring 产品类页 jgoodcat.html ****/
+/**** Spring 产品详情页 jgood.html ****/
+
+/**** Spring 案例类页 janlicat.html ****/
+/**** Spring 案例详情页 janli.html ****/
+
+/**** 单页 jpage.html ****/
+/**** 特殊单页 jpage-liuyan.html ****/
+
+
+
+
+/**** css 代码片段练习 ****/
+
+
+#box{:;}
+.box{:;}
+.box{background-color:#008000;}
+
+
+
+/*:link > :visited > :focus -> :hover -> :active */
+a:link{color:#666;text-decoration:none;}
+a:visited{color:#777;text-decoration:none;}
+a:hover{color:#f60;text-decoration:underline;}
+a:active{color:#f90;text-decoration:underline;}
+
+.box:before{:;}
+.box:after{:;}
+
+.box:first-child{:;}
+.box:last-child{:;}
+.box:nth-child(2n){:;}
+
+
+
+
+
+
+/** a0mod **/
+.a0mod{}
+
+.jmh{}
+.jtit{}.jdsc{}
+.a0mor{}.jdtl{}
+
+
+
+.jcot{}
+.jitm{}.jcot li{}
+
+.a0dl{}
+.a0dt{}
+.a0dd{}
+
+.jnh{}
+
+.a0lnk{}.jurl{}/*已废除*/
+
+.a0cob{}.a0cov{}
+.javb{}.javg{}
+
+.a0bti{}
+.jnme{}
+
+.a0dte{}
+.a0num{}
+
+.a0lbl{}
+.a0msk{}
+
+.a0mtas{}
+.a0mta{}
+.a0key{}.a0val{}
+
+.a0acs{}
+.a0acs .btn{}
+.a0acs .icl{}
+
+
+.a0nte{}
+
+
+
+
+.tb{}
+.tb1{}
+.tb1 th{}
+.tb1 td{}
+
+
+
+
+
+
+
+/*special mods*/
+
+.siteh{}
+.sitelnk{}
+.sitelogo{}
+.sitename{}
+
+
+
+.topcut{line-height:28px;}
+.topcut a{color:#fff;}
+.topnav{}
+
+.topso{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;}
+.sokey{width:95px;}
+.sosbt{height:26px;line-height:26px;padding-left:26px;background-color:#478de4;}
+.sosbt>input{width:0px;height:0;background:none}
+
+.nav{}
+.nav>li{}
+.nav>li>a{display:block;line-height:40px;font-size:16px;font-weight:600;letter-spacing:2px;}
+.nav>li.current-menu-item{background-color:#478de4;}
+.nav>li:active>a{color:#478de4;}
+.nav>li.current-menu-item>a{color:#fff;}
+
+.slider{}
+.ban{}
+.navhere{}.navhere a{}
+
+
+.phare{}
+
+.pagenavi{}.inpages{}
+.page{}
+.nextpostslink{}
+.last{}
+
+
+
+.tlmenus{}
+.tlmenu{}
+
+.ftinfo{}
+.ftlogo{}
+.ftbeian{}
+.ftnav{}
+.ftnav a{}
+
+
+
+
+.bloglist{}
+
+
+
+.blogentry{}
+.post{}
+.post p{}
+.postad{}
+
+.context{}
+.blogrelate{}
+
+.commarea{}
+
+
+.goodlist{}
+.newsposts{}
+.bestposts{}
+
+
+
+
+
+
+/** j1mod **/
+.j1mod{}
+.j1mh{line-height:30px;border-top:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;background-color:#eee;}
+.j1tit{float:left;padding-left:6px;}
+.j1mor{float:right;padding-right:6px;}
+.j1cot{border-right:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+.j1itm{line-height:16px;padding:6px;border-top:1px solid #ccc;}
+
+
+
+
+
+
+/**tb1**/
+.tb1{width:100%;font-size:12px; text-align:center;}
+.tb1 th{line-height:20px;padding:5px;}
+.tb1 td{line-height:20px;padding:5px;}
+.tb1{border-width:1px 1px 0 1px;}
+.tb1 th,.tb1 td{border-width:0 0 1px 0;}
+.tb1,.tb1 th,.tb1 td{border-style:solid; border-color:#ccc;}
+.tb1 th{background-color:#f6f6f6}
+.tb1 .yth{ background-color:#f8f8f8}
+
+
+
+
+
+
+
+
+
+
+
+/*****  feilong.org-20111207-1219-20141123-20150929-gz-end  *****/

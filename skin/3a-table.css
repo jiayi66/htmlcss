@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*****  
+3a-table.css for the CSS Temple. Do not use it directly.
+试验写法，不可实际直接使用
+Version: fl20140814gz
+Author: Feilong & Spring
+Author URI: http://feilong.org
+*****/
+
+
+
+/**** table.css. DO NOT use directly ****/
+
+
+/*** table ***/
+.tbwrap{}
+
+
+/**table base**/
+.tb{width:100%;}
+.tb th{white-space: nowrap;}
+.tb td{text-align:center;}
+
+
+/**1 table   无 */
+.tw th,.tw td{padding:5px;line-height:19px;font-size:12px;}
+
+
+/**1 table  口 */
+.tk{border:1px solid #ccc;}
+.tk th,.tk td{padding:5px;line-height:19px;font-size:12px;}
+
+
+/**1 table  三 */
+.ts{border-top:1px solid #ccc;}
+.ts th,.ts td{border-bottom:1px solid #ccc;padding:5px;line-height:19px;font-size:12px;}
+
+
+/**1 table  日 **/
+.tr{border-width:1px 1px 0 1px;border-style:solid;border-color:#ccc;}
+.tr th,.tr td{border-bottom:1px solid #ccc;padding:5px;line-height:19px;font-size:12px;}
+
+
+/**1 table  川 */
+.tc{border-left:1px solid #ccc;}
+.tc th,.tc td{border-right:1px solid #ccc;padding:5px;line-height:19px;font-size:12px;}
+
+/**1 table  器 */
+.tq{border-width:1px 0 1px 1px;border-style:solid;border-color:#ccc;}
+.tq th,.tq td{border-right:1px solid #ccc;padding:5px;line-height:19px;font-size:12px;}
+
+
+/**1 table 田 **/
+.tt{border-width:1px 0 0 1px;border-style:solid;border-color:#ccc;}
+.tt th,.tt td{border-width:0 1px 1px 0;border-style:solid;border-color:#ccc;padding:5px;line-height:19px;font-size:12px;}
+
+
+/**7 table background **/
+
+/*横式背景*/
+.tg th{background:#E4E4E4 url(th.png) repeat-x 0 0;}
+.tg tr.odd td,.tg tr:nth-child(odd) td{background:#F3F4F5;}
+.tg tr.even td,.tg tr:nth-child(even) td{background:#fff;}
+
+/*纵式背景*/
+.tg1 th{background-color:#f8f8f8;}
+
+
+
+
+
+/*****  end of  3a-table.css *****/
